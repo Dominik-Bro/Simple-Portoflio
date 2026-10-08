@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Minimalistyczne portfolio oparte na kartach i płynnych przejściach między sekcjami.">
+  <title>Portfolio — Imię Nazwisko</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-noise" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <button class="back-button" id="backButton" type="button" aria-label="Wróć do poprzedniej sekcji">
+      <span aria-hidden="true">←</span>
+      <span class="back-button__label">Wróć</span>
+    </button>
+    <div class="topbar__status" id="sectionStatus" aria-live="polite">Start</div>
+  </header>
+
+  <main id="app" class="app" aria-live="polite"></main>
+
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
