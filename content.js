@@ -345,7 +345,7 @@ const EDITABLE_PORTFOLIO = {
             eyebrow: "ABOUT / 01",
             title: "Trochę o mnie",
             text: "Informacje o tym kim jestem, co lubię i jak chciałbym pracować",
-            tags: ["Praktyka", "Dokumentacja"],
+            tags: ["ja"],
 
             detail: {
               title: "Trochę o mnie",
@@ -370,7 +370,7 @@ const EDITABLE_PORTFOLIO = {
             eyebrow: "ABOUT / 02",
             title: "Kontakt",
             text: "Informacje kontaktowe takie, jak adres email i numer telefonu",
-            tags: ["Networking", "Linux", "DevOps"],
+            tags: ["email", "telefon"],
 
             detail: {
               title: "Kontakt",
