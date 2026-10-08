@@ -1,333 +1,509 @@
 /*
- * EDYTUJ GŁÓWNIE TEN PLIK.
+ * ================================================================
+ *  PORTFOLIO — JEDYNY PLIK, KTÓRY MUSISZ EDYTOWAĆ
+ * ================================================================
  *
- * Każda karta może mieć:
- * - title       — duży tytuł karty
- * - eyebrow     — mały opis nad tytułem
- * - text        — krótki tekst widoczny na karcie
- * - tags        — małe znaczniki na dole karty
- * - children    — ID kolejnych kart/sekcji; obecność dzieci oznacza nawigację w dół
- * - detail      — szczegóły pokazywane po kliknięciu karty końcowej
+ *  Nie musisz tutaj pilnować ID, children: ["linux", ...],
+ *  typów "branch" / "leaf" ani osobnych obiektów sections/cards.
  *
- * Dla mediów w szczegółach możesz podać lokalny plik, np. assets/linux.png.
- * Pusta ścieżka oznacza automatyczny placeholder.
+ *  Zasada jest prosta:
+ *    - cards = kafelki widoczne w danej sekcji
+ *    - children = kolejne kafelki po kliknięciu
+ *    - brak children = karta końcowa ze szczegółami
+ *
+ *  Możesz zmieniać tytuły, teksty, tagi, kolejność kart i całą strukturę.
+ *  Po zmianie nazwy nie trzeba poprawiać żadnych odwołań.
+ *
+ *  Dla szczegółów karty końcowej:
+ *    detail.sections — kolejne sekcje tekstu
+ *    detail.list     — lista punktów
+ *    detail.media    — zdjęcia / wideo
+ *
+ *  Media:
+ *    { type: "image", src: "assets/plik.jpg", alt: "Opis" }
+ *    { type: "video", src: "assets/film.mp4", label: "Opis" }
+ *
+ *  Gdy src jest pusty, strona pokazuje placeholder.
+ * ================================================================
  */
 
-window.PORTFOLIO = {
+const EDITABLE_PORTFOLIO = {
   person: {
     name: "Dominik Broszczak",
     role: "IT / Systemy / Sieci / Web",
     intro: "Minimalistyczne portfolio zbudowane jako mapa moich umiejętności, doświadczenia i projektów."
   },
 
-  sections: {
-    start: {
-      label: "Start",
-      title: "Poznaj mnie przez kilka kart.",
-      subtitle: "Wybierz kierunek i zejdź niżej.",
-      cards: ["skills", "experience", "projects", "about"]
-    },
+  start: {
+    label: "Start",
+    title: "Poznaj mnie przez kilka kart.",
+    subtitle: "Wybierz kierunek i zejdź niżej.",
 
-    skills: {
-      label: "Umiejętności",
-      title: "To, czym lubię się zajmować.",
-      subtitle: "Wybierz konkretny obszar, aby zobaczyć szczegóły.",
-      pathLabel: "Umiejętności",
-      cards: ["linux", "networks", "automation"]
-    },
+    cards: [
+      {
+        eyebrow: "01 / SKILLS",
+        title: "Umiejętności",
+        text: "Systemy, sieci, automatyzacja i wszystko, co dzieje się pod maską.",
+        tags: ["Linux", "Sieci", "Automatyzacja"],
 
-    experience: {
-      label: "Doświadczenie",
-      title: "Rzeczy, które robiłem w praktyce.",
-      subtitle: "Od codziennego wsparcia po administrację infrastrukturą.",
-      pathLabel: "Doświadczenie",
-      cards: ["helpdesk", "systems", "infrastructure"]
-    },
-
-    projects: {
-      label: "Projekty",
-      title: "Kilka rzeczy, które zbudowałem.",
-      subtitle: "Strony, self-hosting, sieci i eksperymenty techniczne.",
-      pathLabel: "Projekty",
-      cards: ["web", "homelab", "experiments"]
-    },
-
-    about: {
-      label: "O mnie",
-      title: "Trochę mniej technicznie.",
-      subtitle: "Sposób pracy, ciekawość i kierunek rozwoju.",
-      pathLabel: "O mnie",
-      cards: ["workstyle", "learning"]
-    }
-  },
-
-  cards: {
-    skills: {
-      type: "branch",
-      eyebrow: "01 / SKILLS",
-      title: "Umiejętności",
-      text: "Systemy, sieci, automatyzacja i wszystko, co dzieje się pod maską.",
-      tags: ["Linux", "Sieci", "Windows Server", "Proxmox"],
-      children: ["linux", "networks", "automation"]
-    },
-    experience: {
-      type: "branch",
-      eyebrow: "02 / EXPERIENCE",
-      title: "Doświadczenie",
-      text: "Codzienna praca z użytkownikami, infrastrukturą i usługami IT.",
-      tags: ["Helpdesk", "Admin", "Infra"],
-      children: ["helpdesk", "systems", "infrastructure"]
-    },
-    projects: {
-      type: "branch",
-      eyebrow: "03 / PROJECTS",
-      title: "Projekty",
-      text: "Rzeczy robione po godzinach, od prostych stron po rozbudowany self-hosting.",
-      tags: ["Web", "Homelab", "Open Source"],
-      children: ["web", "homelab", "experiments"]
-    },
-    about: {
-      type: "branch",
-      eyebrow: "04 / ABOUT",
-      title: "O mnie",
-      text: "Trochę kontekstu o tym, jak pracuję i czego szukam dalej.",
-      tags: ["Podejście", "Nauka"],
-      children: ["workstyle", "learning"]
-    },
-
-    linux: {
-      type: "leaf",
-      eyebrow: "SKILLS / 01",
-      title: "Linux",
-      text: "Administracja, troubleshooting i budowanie usług bez zbędnej abstrakcji.",
-      tags: ["Debian", "Ubuntu", "Fedora", "Arch"],
-      detail: {
-        title: "Linux",
-        lead: "Najlepiej czuję się wtedy, gdy mogę wejść poziom niżej i zrozumieć, dlaczego coś działa albo nie działa.",
-        sections: [
+        // Kliknięcie tego kafelka otwiera poniższy zestaw kart.
+        children: [
           {
-            heading: "Praktyka",
-            body: "Zarządzanie usługami, użytkownikami i uprawnieniami, siecią, logami, SSH, kontenerami oraz podstawową automatyzacją."
+            eyebrow: "SKILLS / 01",
+            title: "Linux",
+            text: "Administracja, troubleshooting i budowanie usług bez zbędnej abstrakcji.",
+            tags: ["Debian", "Ubuntu", "Fedora", "Arch"],
+
+            detail: {
+              title: "Linux",
+              lead: "Najlepiej czuję się wtedy, gdy mogę wejść poziom niżej i zrozumieć, dlaczego coś działa albo nie działa.",
+              sections: [
+                {
+                  heading: "Praktyka",
+                  body: "Zarządzanie usługami, użytkownikami i uprawnieniami, siecią, logami, SSH, kontenerami oraz podstawową automatyzacją."
+                },
+                {
+                  heading: "Co rozwijam",
+                  body: "Coraz więcej czasu poświęcam na IaC, monitoring, niezawodność usług i powtarzalne wdrożenia."
+                }
+              ],
+              list: [
+                "systemd i journald",
+                "SSH + klucze",
+                "Docker / Compose",
+                "Btrfs",
+                "sieci Linux",
+                "troubleshooting"
+              ],
+              media: [
+                { type: "image", src: "", alt: "Miejsce na zrzut ekranu terminala" },
+                { type: "video", src: "", label: "Miejsce na demo / nagranie" }
+              ]
+            }
           },
+
           {
-            heading: "Co rozwijam",
-            body: "Coraz więcej czasu poświęcam na IaC, monitoring, niezawodność usług i powtarzalne wdrożenia."
+            eyebrow: "SKILLS / 02",
+            title: "Sieci",
+            text: "Od VLAN-ów i routingu po VPN-y, DNS i dostęp między lokalizacjami.",
+            tags: ["VLAN", "VPN", "DNS", "Routing"],
+
+            detail: {
+              title: "Sieci",
+              lead: "Lubię budować sieci tak, żeby ich zachowanie było przewidywalne, łatwe do diagnozowania i sensownie odseparowane.",
+              sections: [
+                {
+                  heading: "Praktyka",
+                  body: "Konfiguracja VLAN, routingu, DHCP/DNS, tuneli WireGuard oraz dostępu do zasobów wewnętrznych."
+                },
+                {
+                  heading: "Następny poziom",
+                  body: "Więcej routingu dynamicznego, segmentacji i wysokiej dostępności."
+                }
+              ],
+              list: [
+                "VLAN / trunk",
+                "WireGuard",
+                "DNS / DHCP",
+                "NAT",
+                "firewalle",
+                "site-to-site"
+              ],
+              media: [
+                { type: "image", src: "", alt: "Miejsce na diagram sieci" }
+              ]
+            }
+          },
+
+          {
+            eyebrow: "SKILLS / 03",
+            title: "Automatyzacja",
+            text: "Małe skrypty i powtarzalne procesy, które oszczędzają czas.",
+            tags: ["Bash", "PowerShell", "Git"],
+
+            detail: {
+              title: "Automatyzacja",
+              lead: "Automatyzuję przede wszystkim to, co wykonuje się często, według tych samych kroków i co łatwo niechcący zrobić ręcznie źle.",
+              sections: [
+                {
+                  heading: "Narzędzia",
+                  body: "Bash, PowerShell, Git oraz proste pipeline'y CI/CD tam, gdzie dają realną wartość."
+                }
+              ],
+              list: [
+                "skrypty administracyjne",
+                "wdrożenia",
+                "backupy",
+                "masowe konfiguracje",
+                "Git / CI",
+                "diagnostyka"
+              ],
+              media: []
+            }
           }
-        ],
-        list: ["systemd i journald", "SSH + klucze", "Docker / Compose", "Btrfs", "sieci Linux", "troubleshooting"],
-        media: [
-          { type: "image", src: "", alt: "Miejsce na zrzut ekranu terminala" },
-          { type: "video", src: "", label: "Miejsce na demo / nagranie" }
+        ]
+      },
+
+      {
+        eyebrow: "02 / EXPERIENCE",
+        title: "Doświadczenie",
+        text: "Codzienna praca z użytkownikami, infrastrukturą i usługami IT.",
+        tags: ["Helpdesk", "Admin", "Infra"],
+
+        children: [
+          {
+            eyebrow: "EXPERIENCE / 01",
+            title: "Helpdesk",
+            text: "Rozwiązywanie problemów użytkowników, sprzętu, systemów i podstawowej sieci.",
+            tags: ["Users", "Support", "Troubleshooting"],
+
+            detail: {
+              title: "Helpdesk",
+              lead: "Najważniejsze było szybkie odróżnienie problemu użytkownika od problemu systemowego oraz znalezienie przyczyny zamiast obchodzenia objawu.",
+              sections: [
+                {
+                  heading: "Zakres",
+                  body: "Stacje robocze, konta domenowe, drukarki, podstawowe problemy sieciowe, wdrożenia oprogramowania i codzienne wsparcie."
+                }
+              ],
+              list: [
+                "AD / użytkownicy",
+                "Windows",
+                "Office",
+                "drukarki",
+                "sieć",
+                "sprzęt"
+              ],
+              media: []
+            }
+          },
+
+          {
+            eyebrow: "EXPERIENCE / 02",
+            title: "Administracja systemami",
+            text: "Serwery, usługi, GPO, wdrożenia oprogramowania i utrzymanie środowiska.",
+            tags: ["AD", "GPO", "Windows Server", "Linux"],
+
+            detail: {
+              title: "Administracja systemami",
+              lead: "Łączę codzienną administrację z ciągłym porządkowaniem środowiska, żeby mniej rzeczy wymagało ręcznej interwencji.",
+              sections: [
+                {
+                  heading: "Zakres",
+                  body: "Active Directory, GPO, instalacje zdalne, usługi Windows/Linux, udziały sieciowe i podstawowe procedury awaryjne."
+                },
+                {
+                  heading: "Podejście",
+                  body: "Najpierw obserwowalność i powtarzalność, potem dokładanie kolejnej warstwy automatyzacji."
+                }
+              ],
+              list: [
+                "AD",
+                "GPO",
+                "PXE",
+                "iDRAC",
+                "NAS",
+                "usługi Linux"
+              ],
+              media: []
+            }
+          },
+
+          {
+            eyebrow: "EXPERIENCE / 03",
+            title: "Infrastruktura",
+            text: "Wirtualizacja, sieć, storage i usługi, które muszą po prostu działać.",
+            tags: ["Proxmox", "Storage", "Monitoring"],
+
+            detail: {
+              title: "Infrastruktura",
+              lead: "Najciekawsze są dla mnie systemy, w których pojedynczy serwer to dopiero początek — liczy się sposób połączenia wszystkiego w całość.",
+              sections: [
+                {
+                  heading: "Praktyka",
+                  body: "Proxmox, kontenery, monitoring, reverse proxy, DNS, storage oraz usługi uruchamiane w Docker Compose."
+                }
+              ],
+              list: [
+                "Proxmox",
+                "LXC",
+                "Docker Compose",
+                "Nginx",
+                "Zabbix",
+                "Grafana"
+              ],
+              media: [
+                { type: "image", src: "", alt: "Miejsce na schemat infrastruktury" }
+              ]
+            }
+          }
+        ]
+      },
+
+      {
+        eyebrow: "03 / PROJECTS",
+        title: "Projekty",
+        text: "Rzeczy robione po godzinach, od prostych stron po rozbudowany self-hosting.",
+        tags: ["Web", "Homelab", "Open Source"],
+
+        children: [
+          {
+            eyebrow: "PROJECTS / 01",
+            title: "Web",
+            text: "Strony i migracje WordPress → statyczne wdrożenia, z naciskiem na wydajność.",
+            tags: ["HTML", "CSS", "JS", "WordPress"],
+
+            detail: {
+              title: "Web",
+              lead: "Interesuje mnie web, gdy można połączyć prosty frontend z porządną infrastrukturą i kontrolą nad całym wdrożeniem.",
+              sections: [
+                {
+                  heading: "Przykłady",
+                  body: "WordPress, WooCommerce, Cloudflare, statyczne generatory oraz własne rozwiązania bez dokładania pluginu do każdej funkcji."
+                }
+              ],
+              list: [
+                "HTML / CSS",
+                "JavaScript",
+                "WordPress",
+                "WooCommerce",
+                "Cloudflare",
+                "SEO techniczne"
+              ],
+              media: [
+                { type: "image", src: "", alt: "Miejsce na screen strony" }
+              ]
+            }
+          },
+
+          {
+            eyebrow: "PROJECTS / 02",
+            title: "Homelab",
+            text: "Własne środowisko do testowania sieci, kontenerów, usług i automatyzacji.",
+            tags: ["Self-hosting", "Docker", "VPN"],
+
+            detail: {
+              title: "Homelab",
+              lead: "Homelab jest moim poligonem doświadczalnym: mogę testować rozwiązania, psuć je, odtwarzać i dokumentować bez wpływu na produkcję.",
+              sections: [
+                {
+                  heading: "Przykładowe usługi",
+                  body: "Reverse proxy, DNS, Jellyfin, automatyzacja, monitoring, kontenery, VPN oraz zdalny dostęp."
+                }
+              ],
+              list: [
+                "Proxmox",
+                "Docker",
+                "WireGuard",
+                "AdGuard Home",
+                "Jellyfin",
+                "monitoring"
+              ],
+              media: [
+                { type: "image", src: "", alt: "Miejsce na zdjęcie homelabu" }
+              ]
+            }
+          },
+
+          {
+            eyebrow: "PROJECTS / 03",
+            title: "Eksperymenty",
+            text: "Małe projekty sprzętowe, Linux, ESP32 i nietypowe problemy, które są zbyt ciekawe, żeby je zostawić.",
+            tags: ["ESP32", "Hardware", "Linux"],
+
+            detail: {
+              title: "Eksperymenty",
+              lead: "Najwięcej uczę się na rzeczach, których nie ma w tutorialu krok po kroku.",
+              sections: [
+                {
+                  heading: "Typowe kierunki",
+                  body: "ESP32, małe urządzenia, nietypowe systemy Linux, naprawy sprzętu i testowanie granic istniejących rozwiązań."
+                }
+              ],
+              list: [
+                "ESP32",
+                "mikrokontrolery",
+                "Linux",
+                "naprawy",
+                "reverse engineering",
+                "prototypy"
+              ],
+              media: []
+            }
+          }
+        ]
+      },
+
+      {
+        eyebrow: "04 / ABOUT",
+        title: "O mnie",
+        text: "Trochę o mnie i informacje kontaktowe.",
+        tags: ["O mnie", "telefon", "email"],
+
+        children: [
+          {
+            eyebrow: "ABOUT / 01",
+            title: "Trochę o mnie",
+            text: "Informacje o tym kim jestem, co lubię i jak chciałbym pracować",
+            tags: ["Praktyka", "Dokumentacja"],
+
+            detail: {
+              title: "Trochę o mnie",
+              lead: "Najbardziej cenię pracę, w której można połączyć samodzielność, techniczne grzebanie i sensowną dokumentację.",
+              sections: [
+                {
+                  heading: "Zasada",
+                  body: "Diagnozuję → upraszczam → automatyzuję → dokumentuję."
+                }
+              ],
+              list: [
+                "samodzielność",
+                "dociekliwość",
+                "dokumentacja",
+                "powtarzalność"
+              ],
+              media: []
+            }
+          },
+
+          {
+            eyebrow: "ABOUT / 02",
+            title: "Kontakt",
+            text: "Informacje kontaktowe takie, jak adres email i numer telefonu",
+            tags: ["Networking", "Linux", "DevOps"],
+
+            detail: {
+              title: "Kontakt",
+              lead: "Jeżeli portfolio, Cię zainteresowało i chcesz porozmawiać, to można mnie znaleźć pod telefon i adresem email:",
+              list: [
+                "Tel: XXX",
+                "email: dominikbroszczak@proton.me",
+              ],
+              media: []
+            }
+          }
         ]
       }
-    },
-
-    networks: {
-      type: "leaf",
-      eyebrow: "SKILLS / 02",
-      title: "Sieci",
-      text: "Od VLAN-ów i routingu po VPN-y, DNS i dostęp między lokalizacjami.",
-      tags: ["VLAN", "VPN", "DNS", "Routing"],
-      detail: {
-        title: "Sieci",
-        lead: "Lubię budować sieci tak, żeby ich zachowanie było przewidywalne, łatwe do diagnozowania i sensownie odseparowane.",
-        sections: [
-          {
-            heading: "Praktyka",
-            body: "Konfiguracja VLAN, routingu, DHCP/DNS, tuneli WireGuard oraz dostępu do zasobów wewnętrznych."
-          },
-          {
-            heading: "Następny poziom",
-            body: "Więcej routingu dynamicznego, segmentacji i wysokiej dostępności."
-          }
-        ],
-        list: ["VLAN / trunk", "WireGuard", "DNS / DHCP", "NAT", "firewalle", "site-to-site"],
-        media: [{ type: "image", src: "", alt: "Miejsce na diagram sieci" }]
-      }
-    },
-
-    automation: {
-      type: "leaf",
-      eyebrow: "SKILLS / 03",
-      title: "Automatyzacja",
-      text: "Małe skrypty i powtarzalne procesy, które oszczędzają czas.",
-      tags: ["Bash", "PowerShell", "Git"],
-      detail: {
-        title: "Automatyzacja",
-        lead: "Automatyzuję przede wszystkim to, co wykonuje się często, według tych samych kroków i co łatwo niechcący zrobić ręcznie źle.",
-        sections: [
-          {
-            heading: "Narzędzia",
-            body: "Bash, PowerShell, Git oraz proste pipeline'y CI/CD tam, gdzie dają realną wartość."
-          }
-        ],
-        list: ["skrypty administracyjne", "wdrożenia", "backupy", "masowe konfiguracje", "Git / CI", "diagnostyka"],
-        media: []
-      }
-    },
-
-    helpdesk: {
-      type: "leaf",
-      eyebrow: "EXPERIENCE / 01",
-      title: "Helpdesk",
-      text: "Rozwiązywanie problemów użytkowników, sprzętu, systemów i podstawowej sieci.",
-      tags: ["Users", "Support", "Troubleshooting"],
-      detail: {
-        title: "Helpdesk",
-        lead: "Najważniejsze było szybkie odróżnienie problemu użytkownika od problemu systemowego oraz znalezienie przyczyny zamiast obchodzenia objawu.",
-        sections: [
-          {
-            heading: "Zakres",
-            body: "Stacje robocze, konta domenowe, drukarki, podstawowe problemy sieciowe, wdrożenia oprogramowania i codzienne wsparcie."
-          }
-        ],
-        list: ["AD / użytkownicy", "Windows", "Office", "drukarki", "sieć", "sprzęt"],
-        media: []
-      }
-    },
-
-    systems: {
-      type: "leaf",
-      eyebrow: "EXPERIENCE / 02",
-      title: "Administracja systemami",
-      text: "Serwery, usługi, GPO, wdrożenia oprogramowania i utrzymanie środowiska.",
-      tags: ["AD", "GPO", "Windows Server", "Linux"],
-      detail: {
-        title: "Administracja systemami",
-        lead: "Łączę codzienną administrację z ciągłym porządkowaniem środowiska, żeby mniej rzeczy wymagało ręcznej interwencji.",
-        sections: [
-          {
-            heading: "Zakres",
-            body: "Active Directory, GPO, instalacje zdalne, usługi Windows/Linux, udziały sieciowe i podstawowe procedury awaryjne."
-          },
-          {
-            heading: "Podejście",
-            body: "Najpierw obserwowalność i powtarzalność, potem dokładanie kolejnej warstwy automatyzacji."
-          }
-        ],
-        list: ["AD", "GPO", "PXE", "iDRAC", "NAS", "usługi Linux"],
-        media: []
-      }
-    },
-
-    infrastructure: {
-      type: "leaf",
-      eyebrow: "EXPERIENCE / 03",
-      title: "Infrastruktura",
-      text: "Wirtualizacja, sieć, storage i usługi, które muszą po prostu działać.",
-      tags: ["Proxmox", "Storage", "Monitoring"],
-      detail: {
-        title: "Infrastruktura",
-        lead: "Najciekawsze są dla mnie systemy, w których pojedynczy serwer to dopiero początek — liczy się sposób połączenia wszystkiego w całość.",
-        sections: [
-          {
-            heading: "Praktyka",
-            body: "Proxmox, kontenery, monitoring, reverse proxy, DNS, storage oraz usługi uruchamiane w Docker Compose."
-          }
-        ],
-        list: ["Proxmox", "LXC", "Docker Compose", "Nginx", "Zabbix", "Grafana"],
-        media: [{ type: "image", src: "", alt: "Miejsce na schemat infrastruktury" }]
-      }
-    },
-
-    web: {
-      type: "leaf",
-      eyebrow: "PROJECTS / 01",
-      title: "Web",
-      text: "Strony i migracje WordPress → statyczne wdrożenia, z naciskiem na wydajność.",
-      tags: ["HTML", "CSS", "JS", "WordPress"],
-      detail: {
-        title: "Web",
-        lead: "Interesuje mnie web, gdy można połączyć prosty frontend z porządną infrastrukturą i kontrolą nad całym wdrożeniem.",
-        sections: [
-          {
-            heading: "Przykłady",
-            body: "WordPress, WooCommerce, Cloudflare, statyczne generatory oraz własne rozwiązania bez dokładania pluginu do każdej funkcji."
-          }
-        ],
-        list: ["HTML / CSS", "JavaScript", "WordPress", "WooCommerce", "Cloudflare", "SEO techniczne"],
-        media: [{ type: "image", src: "", alt: "Miejsce na screen strony" }]
-      }
-    },
-
-    homelab: {
-      type: "leaf",
-      eyebrow: "PROJECTS / 02",
-      title: "Homelab",
-      text: "Własne środowisko do testowania sieci, kontenerów, usług i automatyzacji.",
-      tags: ["Self-hosting", "Docker", "VPN"],
-      detail: {
-        title: "Homelab",
-        lead: "Homelab jest moim poligonem doświadczalnym: mogę testować rozwiązania, psuć je, odtwarzać i dokumentować bez wpływu na produkcję.",
-        sections: [
-          {
-            heading: "Przykładowe usługi",
-            body: "Reverse proxy, DNS, Jellyfin, automatyzacja, monitoring, kontenery, VPN oraz zdalny dostęp."
-          }
-        ],
-        list: ["Proxmox", "Docker", "WireGuard", "AdGuard Home", "Jellyfin", "monitoring"],
-        media: [{ type: "image", src: "", alt: "Miejsce na zdjęcie homelabu" }]
-      }
-    },
-
-    experiments: {
-      type: "leaf",
-      eyebrow: "PROJECTS / 03",
-      title: "Eksperymenty",
-      text: "Małe projekty sprzętowe, Linux, ESP32 i nietypowe problemy, które są zbyt ciekawe, żeby je zostawić.",
-      tags: ["ESP32", "Hardware", "Linux"],
-      detail: {
-        title: "Eksperymenty",
-        lead: "Najwięcej uczę się na rzeczach, których nie ma w tutorialu krok po kroku.",
-        sections: [
-          {
-            heading: "Typowe kierunki",
-            body: "ESP32, małe urządzenia, nietypowe systemy Linux, naprawy sprzętu i testowanie granic istniejących rozwiązań."
-          }
-        ],
-        list: ["ESP32", "mikrokontrolery", "Linux", "naprawy", "reverse engineering", "prototypy"],
-        media: []
-      }
-    },
-
-    workstyle: {
-      type: "leaf",
-      eyebrow: "ABOUT / 01",
-      title: "Sposób pracy",
-      text: "Lubię rozumieć przyczynę problemu i zostawiać po sobie rozwiązanie, które da się powtórzyć.",
-      tags: ["Praktyka", "Dokumentacja"],
-      detail: {
-        title: "Sposób pracy",
-        lead: "Najbardziej cenię pracę, w której można połączyć samodzielność, techniczne grzebanie i sensowną dokumentację.",
-        sections: [
-          {
-            heading: "Zasada",
-            body: "Diagnozuję → upraszczam → automatyzuję → dokumentuję."
-          }
-        ],
-        list: ["samodzielność", "dociekliwość", "dokumentacja", "powtarzalność"],
-        media: []
-      }
-    },
-
-    learning: {
-      type: "leaf",
-      eyebrow: "ABOUT / 02",
-      title: "Kierunek rozwoju",
-      text: "Rozwijam się w stronę administracji sieciami i systemami oraz DevOps.",
-      tags: ["Networking", "Linux", "DevOps"],
-      detail: {
-        title: "Kierunek rozwoju",
-        lead: "Docelowo chcę łączyć wiedzę z sieci, systemów i automatyzacji zamiast traktować te obszary jako oddzielne światy.",
-        sections: [
-          {
-            heading: "Najbliższe cele",
-            body: "Więcej praktyki z routingiem, automatyzacją, IaC, CI/CD, obserwowalnością i niezawodnością usług."
-          }
-        ],
-        list: ["Cisco", "MikroTik", "Linux", "Ansible", "CI/CD", "observability"],
-        media: []
-      }
-    }
+    ]
   }
 };
+
+/* -----------------------------------------------------------------
+ *  PONIŻEJ NIE TRZEBA JUŻ NIC EDYTOWAĆ.
+ *  To tylko konwerter prostego drzewa powyżej do formatu używanego
+ *  przez obecny script.js.
+ * ----------------------------------------------------------------- */
+
+(() => {
+  "use strict";
+
+  const source = EDITABLE_PORTFOLIO;
+  const sections = {};
+  const cards = {};
+  const usedIds = new Set(["start"]);
+
+  function slugify(value) {
+    return String(value)
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/&/g, " i ")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 48) || "card";
+  }
+
+  function uniqueId(title) {
+    const base = slugify(title);
+    let id = base;
+    let number = 2;
+
+    while (usedIds.has(id)) {
+      id = `${base}-${number}`;
+      number += 1;
+    }
+
+    usedIds.add(id);
+    return id;
+  }
+
+  function clone(value) {
+    if (typeof structuredClone === "function") return structuredClone(value);
+    return JSON.parse(JSON.stringify(value));
+  }
+
+  function addBranch(parentSectionId, cardSource, sectionNumber) {
+    const cardId = uniqueId(cardSource.title);
+    const childCards = Array.isArray(cardSource.children) ? cardSource.children : [];
+
+    cards[cardId] = {
+      type: "branch",
+      eyebrow: cardSource.eyebrow || `SECTION / ${String(sectionNumber).padStart(2, "0")}`,
+      title: cardSource.title,
+      text: cardSource.text || "",
+      tags: Array.isArray(cardSource.tags) ? [...cardSource.tags] : [],
+      children: []
+    };
+
+    sections[cardId] = {
+      label: cardSource.section?.label || cardSource.title,
+      title: cardSource.section?.title || cardSource.title,
+      subtitle: cardSource.section?.subtitle || "Wybierz konkretny obszar, aby zobaczyć szczegóły.",
+      pathLabel: cardSource.section?.pathLabel || cardSource.title,
+      cards: []
+    };
+
+    childCards.forEach((child, index) => {
+      const childId = addCard(cardId, child, index + 1);
+      cards[cardId].children.push(childId);
+      sections[cardId].cards.push(childId);
+    });
+
+    return cardId;
+  }
+
+  function addCard(parentSectionId, cardSource, cardNumber) {
+    const hasChildren = Array.isArray(cardSource.children) && cardSource.children.length > 0;
+
+    if (hasChildren) {
+      return addBranch(parentSectionId, cardSource, cardNumber);
+    }
+
+    const cardId = uniqueId(cardSource.title);
+
+    cards[cardId] = {
+      type: "leaf",
+      eyebrow: cardSource.eyebrow || `CARD / ${String(cardNumber).padStart(2, "0")}`,
+      title: cardSource.title,
+      text: cardSource.text || "",
+      tags: Array.isArray(cardSource.tags) ? [...cardSource.tags] : [],
+      detail: clone(cardSource.detail || {
+        title: cardSource.title,
+        lead: cardSource.text || "",
+        sections: [],
+        list: [],
+        media: []
+      })
+    };
+
+    return cardId;
+  }
+
+  sections.start = {
+    label: source.start.label || "Start",
+    title: source.start.title || "",
+    subtitle: source.start.subtitle || "",
+    cards: []
+  };
+
+  source.start.cards.forEach((card, index) => {
+    const cardId = addCard("start", card, index + 1);
+    sections.start.cards.push(cardId);
+  });
+
+  window.PORTFOLIO = {
+    person: source.person,
+    sections,
+    cards
+  };
+})();

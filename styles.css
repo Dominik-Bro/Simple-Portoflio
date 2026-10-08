@@ -475,7 +475,7 @@ button {
 
 .detail-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.9fr);
+  grid-template-columns: 1fr 1fr;
   gap: clamp(26px, 5vw, 70px);
   margin-top: 46px;
 }

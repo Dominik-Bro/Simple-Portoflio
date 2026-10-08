@@ -290,7 +290,6 @@
 
     const list = detail.list?.length ? `
       <div class="detail-list">
-        <h3>Zakres</h3>
         <ul>
           ${detail.list.map((item) => `<li>${escapeAttribute(item)}</li>`).join("")}
         </ul>
@@ -322,8 +321,8 @@
             <p class="detail-card__lead">${escapeAttribute(detail.lead || card.text)}</p>
 
             <div class="detail-grid">
-              <div>${sections}</div>
               <aside>${list}</aside>
+              <div>${sections}</div>
             </div>
 
             ${media ? `<div class="detail-media">${media}</div>` : ""}
