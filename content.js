@@ -15,7 +15,7 @@
 
 window.PORTFOLIO = {
   person: {
-    name: "Imię Nazwisko",
+    name: "Dominik Broszczak",
     role: "IT / Systemy / Sieci / Web",
     intro: "Minimalistyczne portfolio zbudowane jako mapa moich umiejętności, doświadczenia i projektów."
   },
@@ -67,7 +67,7 @@ window.PORTFOLIO = {
       eyebrow: "01 / SKILLS",
       title: "Umiejętności",
       text: "Systemy, sieci, automatyzacja i wszystko, co dzieje się pod maską.",
-      tags: ["Linux", "Sieci", "Automatyzacja"],
+      tags: ["Linux", "Sieci", "Windows Server", "Proxmox"],
       children: ["linux", "networks", "automation"]
     },
     experience: {
