@@ -163,7 +163,7 @@ const EDITABLE_PORTFOLIO = {
               sections: [
               ],
               list: [
-                "Czas pracy: 12.2025 - 06.2026",
+                {text: "Czas pracy: 12.2025 - 06.2026", bold: true},
                 "Najważniejsze zadania:",
                 "Świadzenie wsparcia technicznego Help Desk/Service Desk",
                 "Office",

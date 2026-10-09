@@ -284,7 +284,14 @@
     const list = detail.list?.length ? `
       <div class="detail-list">
         <ul>
-          ${detail.list.map((item) => `<li>${escapeAttribute(item)}</li>`).join("")}
+        ${detail.list.map((item) => {
+  const text = typeof item === "string" ? item : item.text;
+  const content = escapeAttribute(text);
+
+  return `<li>${typeof item !== "string" && item.bold
+    ? `<strong>${content}</strong>`
+    : content}</li>`;
+}).join("")}
         </ul>
       </div>
     ` : "";
