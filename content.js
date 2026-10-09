@@ -147,28 +147,25 @@ const EDITABLE_PORTFOLIO = {
       {
         eyebrow: "02 / EXPERIENCE",
         title: "Doświadczenie",
-        text: "Codzienna praca z użytkownikami, infrastrukturą i usługami IT.",
-        tags: ["Helpdesk", "Admin", "Infra"],
+        text: "Moje dotychczasowe stanowsika, na których byłem zatrudniony",
+        tags: ["Helpdesk", "Admin", "Content", "CMS"],
 
         children: [
           {
             eyebrow: "EXPERIENCE / 01",
-            title: "Helpdesk",
-            text: "Rozwiązywanie problemów użytkowników, sprzętu, systemów i podstawowej sieci.",
-            tags: ["Users", "Support", "Troubleshooting"],
+            title: "Administrator IT",
+            text: "Stanowisko Administratora IT w firmie Sputnik Doors",
+            tags: ["Administracja", "Support", "Wdrożenia"],
 
             detail: {
-              title: "Helpdesk",
-              lead: "Najważniejsze było szybkie odróżnienie problemu użytkownika od problemu systemowego oraz znalezienie przyczyny zamiast obchodzenia objawu.",
+              title: "Administrator IT Sputnik Doors",
+              lead: "Praca jako administrator IT w firmie Sputnik Doors, była moim pierwszym komercynjym doświadczeniem w zarządzaniu inrastrukturom na której polegało wiele osób. Specyfika pracy była tutaj mocno mieszana i na pewno nie mogłem się tam nudzić. W zależności od dnia i godziny, byłem tam pierwszą linią wpsarcia zarabiającą nowy kabel Ethernet do czyjejś stacji roboczej, czy też rozwiązującą problemy z działaniem Worda u współpracowników. Administatorem sieci dzielącym sieć na vLAN'y, konfgurującym VPN'y i konfigurującym nowe urządzenia sieciowe. Czy też 'wdrożeniowcem', oddającym w ręce innych pracowników zestawy narzędzi takich, jak Nextcloud, aplikacje dla handlowców synchronizujące się z systemem ERP (współpraca z zewnątrzną firmą) lub też przenoszącym usługi hostingowe i pocztowe do nowego dostawcy",
               sections: [
-                {
-                  heading: "Zakres",
-                  body: "Stacje robocze, konta domenowe, drukarki, podstawowe problemy sieciowe, wdrożenia oprogramowania i codzienne wsparcie."
-                }
               ],
               list: [
-                "AD / użytkownicy",
-                "Windows",
+                "Czas pracy: 12.2025 - 06.2026",
+                "Najważniejsze zadania:",
+                "Świadzenie wsparcia technicznego Help Desk/Service Desk",
                 "Office",
                 "drukarki",
                 "sieć",
@@ -180,8 +177,8 @@ const EDITABLE_PORTFOLIO = {
 
           {
             eyebrow: "EXPERIENCE / 02",
-            title: "Administracja systemami",
-            text: "Serwery, usługi, GPO, wdrożenia oprogramowania i utrzymanie środowiska.",
+            title: "Copywriter",
+            text: "Tworzenie i zarządzanie treściami na stronie Internetowej refabryka.pl",
             tags: ["AD", "GPO", "Windows Server", "Linux"],
 
             detail: {
@@ -211,7 +208,7 @@ const EDITABLE_PORTFOLIO = {
 
           {
             eyebrow: "EXPERIENCE / 03",
-            title: "Infrastruktura",
+            title: "Asystent ds. platform Internetowych",
             text: "Wirtualizacja, sieć, storage i usługi, które muszą po prostu działać.",
             tags: ["Proxmox", "Storage", "Monitoring"],
 
@@ -243,8 +240,8 @@ const EDITABLE_PORTFOLIO = {
       {
         eyebrow: "03 / PROJECTS",
         title: "Projekty",
-        text: "Rzeczy robione po godzinach, od prostych stron po rozbudowany self-hosting.",
-        tags: ["Web", "Homelab", "Open Source"],
+        text: "Rzeczy, które zrobiłem w pracy i prywatnide",
+        tags: ["Wdrożenia", "Homelab", "Hobby"],
 
         children: [
           {

@@ -322,7 +322,6 @@
 
             <div class="detail-grid">
               <aside>${list}</aside>
-              <div>${sections}</div>
             </div>
 
             ${media ? `<div class="detail-media">${media}</div>` : ""}
