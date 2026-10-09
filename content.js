@@ -159,17 +159,26 @@ const EDITABLE_PORTFOLIO = {
 
             detail: {
               title: "Administrator IT Sputnik Doors",
-              lead: "Praca jako administrator IT w firmie Sputnik Doors, była moim pierwszym komercynjym doświadczeniem w zarządzaniu inrastrukturom na której polegało wiele osób. Specyfika pracy była tutaj mocno mieszana i na pewno nie mogłem się tam nudzić. W zależności od dnia i godziny, byłem tam pierwszą linią wpsarcia zarabiającą nowy kabel Ethernet do czyjejś stacji roboczej, czy też rozwiązującą problemy z działaniem Worda u współpracowników. Administatorem sieci dzielącym sieć na vLAN'y, konfgurującym VPN'y i konfigurującym nowe urządzenia sieciowe. Czy też 'wdrożeniowcem', oddającym w ręce innych pracowników zestawy narzędzi takich, jak Nextcloud, aplikacje dla handlowców synchronizujące się z systemem ERP (współpraca z zewnątrzną firmą) lub też przenoszącym usługi hostingowe i pocztowe do nowego dostawcy",
+              lead: "Praca jako administrator IT w firmie Sputnik Doors, była moim pierwszym komercynjym doświadczeniem w zarządzaniu inrastrukturom na której polegało wiele osób. Specyfika pracy była tutaj mocno mieszana i na pewno nie mogłem się tam nudzić. W zależności od dnia i godziny, byłem tam pierwszą linią wpsarcia zarabiającą nowy kabel Ethernet do czyjejś stacji roboczej, czy też rozwiązującą problemy z działaniem Worda u współpracowników. Administatorem sieci dzielącym sieć na vLAN'y, konfgurującym VPN'y i konfigurującym nowe urządzenia sieciowe. Czy też 'wdrożeniowcem', oddającym w ręce innych pracowników zestawy narzędzi takich, jak Nextcloud, aplikacje dla handlowców synchronizujące się z systemem ERP (współpraca z zewnątrzną firmą) lub też przenoszącym usługi hostingowe i pocztowe do nowego dostawcy.",
               sections: [
               ],
               list: [
                 {text: "Czas pracy: 12.2025 - 06.2026", bold: true},
-                "Najważniejsze zadania:",
+                {text: "Najważniejsze zadania:", bold:true},
                 "Świadzenie wsparcia technicznego Help Desk/Service Desk",
-                "Office",
-                "drukarki",
-                "sieć",
-                "sprzęt"
+                "Planowanie i realizacja projektów IT ukierunkowanych na modernizację infrastruktury",
+                "Konfiguracja nowych urządzeń sieciowych Ubiquiti (access pointy, switche, routery)",
+                "Zarządzanie sieciami vLAN zaporami sieciowymi, routingiem i port forwardingiem w celu zapewnieniania własciwej segmentacji i bezpieczeństwa sieci",
+                "Konfiguraja i utrzymanie serwerów VPN (Remtoe Access oraz Site-to-Site)",
+                "Administracja środowiskiem Window Server - Zarządzanie Active Directory, konfiguracja i wdrażanie zasad grup, synchronizacja usług z LDAP",
+                "Wdrażanie i utrzymanie maszyn w środowisku Hyper-V oraz Proxmox",
+                "Zarządzanie kontenerami Docker na maszynach wirtualncyh",
+                "Administracja maszyn wirtualnych i serwerów z systemem Linux (zdalnie, przez SSH i SFTP, czy przez konsolę Proxmox'a)",
+                "Bezpieczne udostepnianie aplikacji na zewnątrz z wykorzystaniem MFA, m.in przez usługę Cloudflare Tunnel",
+                "Zarządzenie ceryfikatami SSL/TLS",
+                "Konfiguracja i utrzymanie serwerów WWW (Apache, Nginx, OpenResty) oraz Reverse Proxy",
+                "Modernizacja i administracja stron Internetowych opartych o CMS Wordpress",
+                "Konfiguracja serwerów pocztowych na potrzeby na potrzeby stworzenia lokalnego systemu backupu wiadomości",
               ],
               media: []
             }
