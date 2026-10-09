@@ -473,10 +473,8 @@ button {
   font-size: clamp(1.05rem, 1.8vw, 1.3rem);
 }
 
-.detail-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(26px, 5vw, 70px);
+.detail-list {
+  width: 100%;
   margin-top: 46px;
 }
 

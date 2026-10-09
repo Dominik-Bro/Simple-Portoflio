@@ -281,13 +281,6 @@
     const detail = card?.detail;
     if (!detail) return "";
 
-    const sections = (detail.sections || []).map((section) => `
-      <section class="detail-section">
-        <h3>${escapeAttribute(section.heading)}</h3>
-        <p>${escapeAttribute(section.body)}</p>
-      </section>
-    `).join("");
-
     const list = detail.list?.length ? `
       <div class="detail-list">
         <ul>
@@ -320,9 +313,7 @@
 
             <p class="detail-card__lead">${escapeAttribute(detail.lead || card.text)}</p>
 
-            <div class="detail-grid">
-              <aside>${list}</aside>
-            </div>
+            ${list}
 
             ${media ? `<div class="detail-media">${media}</div>` : ""}
 
