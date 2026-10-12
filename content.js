@@ -82,6 +82,33 @@ const EDITABLE_PORTFOLIO = {
 
           {
             eyebrow: "SKILLS / 02",
+            title: "Windows",
+            text: "Małe skrypty i powtarzalne procesy, które oszczędzają czas.",
+            tags: ["Bash", "PowerShell", "Git"],
+
+            detail: {
+              title: "Automatyzacja",
+              lead: "Automatyzuję przede wszystkim to, co wykonuje się często, według tych samych kroków i co łatwo niechcący zrobić ręcznie źle.",
+              sections: [
+                {
+                  heading: "Narzędzia",
+                  body: "Bash, PowerShell, Git oraz proste pipeline'y CI/CD tam, gdzie dają realną wartość."
+                }
+              ],
+              list: [
+                "skrypty administracyjne",
+                "wdrożenia",
+                "backupy",
+                "masowe konfiguracje",
+                "Git / CI",
+                "diagnostyka"
+              ],
+              media: []
+            }
+          },
+
+          {
+            eyebrow: "SKILLS / 03",
             title: "Sieci",
             text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
             tags: ["VLAN", "VPN", "DNS", "Routing"],
@@ -114,7 +141,7 @@ const EDITABLE_PORTFOLIO = {
           },
 
           {
-            eyebrow: "SKILLS / 03",
+            eyebrow: "SKILLS / 04",
             title: "WWW i Proxy",
             text: "Małe skrypty i powtarzalne procesy, które oszczędzają czas.",
             tags: ["Bash", "PowerShell", "Git"],
@@ -140,31 +167,166 @@ const EDITABLE_PORTFOLIO = {
             }
           },
           {
-            eyebrow: "SKILLS / 04",
-            title: "WWW i Proxy",
-            text: "Małe skrypty i powtarzalne procesy, które oszczędzają czas.",
-            tags: ["Bash", "PowerShell", "Git"],
+            eyebrow: "SKILLS / 05",
+            title: "Serwery",
+            text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
+            tags: ["VLAN", "VPN", "DNS", "Routing"],
 
             detail: {
-              title: "Automatyzacja",
-              lead: "Automatyzuję przede wszystkim to, co wykonuje się często, według tych samych kroków i co łatwo niechcący zrobić ręcznie źle.",
+              title: "Sieci",
+              lead: "Lubię budować sieci tak, żeby ich zachowanie było przewidywalne, łatwe do diagnozowania i sensownie odseparowane.",
               sections: [
                 {
-                  heading: "Narzędzia",
-                  body: "Bash, PowerShell, Git oraz proste pipeline'y CI/CD tam, gdzie dają realną wartość."
+                  heading: "Praktyka",
+                  body: "Konfiguracja VLAN, routingu, DHCP/DNS, tuneli WireGuard oraz dostępu do zasobów wewnętrznych."
+                },
+                {
+                  heading: "Następny poziom",
+                  body: "Więcej routingu dynamicznego, segmentacji i wysokiej dostępności."
                 }
               ],
               list: [
-                "skrypty administracyjne",
-                "wdrożenia",
-                "backupy",
-                "masowe konfiguracje",
-                "Git / CI",
-                "diagnostyka"
+                "VLAN / trunk",
+                "WireGuard",
+                "DNS / DHCP",
+                "NAT",
+                "firewalle",
+                "site-to-site"
               ],
-              media: []
+              media: [
+                { type: "image", src: "", alt: "Miejsce na diagram sieci" }
+              ]
             }
-          }
+          },
+          {
+            eyebrow: "SKILLS / 06",
+            title: "Wirtualizacja",
+            text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
+            tags: ["VLAN", "VPN", "DNS", "Routing"],
+
+            detail: {
+              title: "Sieci",
+              lead: "Lubię budować sieci tak, żeby ich zachowanie było przewidywalne, łatwe do diagnozowania i sensownie odseparowane.",
+              sections: [
+                {
+                  heading: "Praktyka",
+                  body: "Konfiguracja VLAN, routingu, DHCP/DNS, tuneli WireGuard oraz dostępu do zasobów wewnętrznych."
+                },
+                {
+                  heading: "Następny poziom",
+                  body: "Więcej routingu dynamicznego, segmentacji i wysokiej dostępności."
+                }
+              ],
+              list: [
+                "VLAN / trunk",
+                "WireGuard",
+                "DNS / DHCP",
+                "NAT",
+                "firewalle",
+                "site-to-site"
+              ],
+              media: [
+                { type: "image", src: "", alt: "Miejsce na diagram sieci" }
+              ]
+            }
+          },
+          {
+            eyebrow: "SKILLS / 07",
+            title: "Sprzęt",
+            text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
+            tags: ["VLAN", "VPN", "DNS", "Routing"],
+
+            detail: {
+              title: "Sieci",
+              lead: "Lubię budować sieci tak, żeby ich zachowanie było przewidywalne, łatwe do diagnozowania i sensownie odseparowane.",
+              sections: [
+                {
+                  heading: "Praktyka",
+                  body: "Konfiguracja VLAN, routingu, DHCP/DNS, tuneli WireGuard oraz dostępu do zasobów wewnętrznych."
+                },
+                {
+                  heading: "Następny poziom",
+                  body: "Więcej routingu dynamicznego, segmentacji i wysokiej dostępności."
+                }
+              ],
+              list: [
+                "VLAN / trunk",
+                "WireGuard",
+                "DNS / DHCP",
+                "NAT",
+                "firewalle",
+                "site-to-site"
+              ],
+              media: [
+                { type: "image", src: "", alt: "Miejsce na diagram sieci" }
+              ]
+            }
+          },
+          
+          {
+            eyebrow: "SKILLS / 08",
+            title: "Wordpress",
+            text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
+            tags: ["VLAN", "VPN", "DNS", "Routing"],
+
+            detail: {
+              title: "Sieci",
+              lead: "Lubię budować sieci tak, żeby ich zachowanie było przewidywalne, łatwe do diagnozowania i sensownie odseparowane.",
+              sections: [
+                {
+                  heading: "Praktyka",
+                  body: "Konfiguracja VLAN, routingu, DHCP/DNS, tuneli WireGuard oraz dostępu do zasobów wewnętrznych."
+                },
+                {
+                  heading: "Następny poziom",
+                  body: "Więcej routingu dynamicznego, segmentacji i wysokiej dostępności."
+                }
+              ],
+              list: [
+                "VLAN / trunk",
+                "WireGuard",
+                "DNS / DHCP",
+                "NAT",
+                "firewalle",
+                "site-to-site"
+              ],
+              media: [
+                { type: "image", src: "", alt: "Miejsce na diagram sieci" }
+              ]
+            }
+          },
+          {
+            eyebrow: "SKILLS / 09",
+            title: "Copyrwriting",
+            text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
+            tags: ["VLAN", "VPN", "DNS", "Routing"],
+
+            detail: {
+              title: "Sieci",
+              lead: "Lubię budować sieci tak, żeby ich zachowanie było przewidywalne, łatwe do diagnozowania i sensownie odseparowane.",
+              sections: [
+                {
+                  heading: "Praktyka",
+                  body: "Konfiguracja VLAN, routingu, DHCP/DNS, tuneli WireGuard oraz dostępu do zasobów wewnętrznych."
+                },
+                {
+                  heading: "Następny poziom",
+                  body: "Więcej routingu dynamicznego, segmentacji i wysokiej dostępności."
+                }
+              ],
+              list: [
+                "VLAN / trunk",
+                "WireGuard",
+                "DNS / DHCP",
+                "NAT",
+                "firewalle",
+                "site-to-site"
+              ],
+              media: [
+                { type: "image", src: "", alt: "Miejsce na diagram sieci" }
+              ]
+            }
+          },
         ]
       },
 
