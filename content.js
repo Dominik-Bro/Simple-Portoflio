@@ -153,7 +153,7 @@ const EDITABLE_PORTFOLIO = {
         children: [
           {
             eyebrow: "EXPERIENCE / 01",
-            title: "Administrator IT",
+            title: "Administrator",
             text: "Stanowisko Administratora IT w firmie Sputnik Doors",
             tags: ["Administracja", "Support", "Wdrożenia"],
 
@@ -178,7 +178,7 @@ const EDITABLE_PORTFOLIO = {
                 "Zarządzenie ceryfikatami SSL/TLS",
                 "Konfiguracja i utrzymanie serwerów WWW (Apache, Nginx, OpenResty) oraz Reverse Proxy",
                 "Modernizacja i administracja stron Internetowych opartych o CMS Wordpress",
-                "Konfiguracja serwerów pocztowych na potrzeby na potrzeby stworzenia lokalnego systemu backupu wiadomości",
+                "Konfiguracja serwerów pocztowych na potrzeby stworzenia lokalnego systemu backupu wiadomości",
               ],
               media: []
             }
@@ -217,7 +217,7 @@ const EDITABLE_PORTFOLIO = {
 
           {
             eyebrow: "EXPERIENCE / 03",
-            title: "Asystent ds. platform Internetowych",
+            title: "Asystent",
             text: "Wirtualizacja, sieć, storage i usługi, które muszą po prostu działać.",
             tags: ["Proxmox", "Storage", "Monitoring"],
 
