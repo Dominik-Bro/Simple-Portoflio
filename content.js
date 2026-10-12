@@ -75,8 +75,7 @@ const EDITABLE_PORTFOLIO = {
                 "Tworzenie skryptów Bashowych"
               ],
               media: [
-                { type: "image", src: "", alt: "Miejsce na zrzut ekranu terminala" },
-                { type: "video", src: "", label: "Miejsce na demo / nagranie" }
+                { type: "image", src: "fastfetch.png", alt: "Miejsce na zrzut ekranu terminala" },
               ]
             }
           },
