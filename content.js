@@ -51,29 +51,28 @@ const EDITABLE_PORTFOLIO = {
           {
             eyebrow: "SKILLS / 01",
             title: "Linux",
-            text: "Administracja, troubleshooting i budowanie usług bez zbędnej abstrakcji.",
-            tags: ["Debian", "Ubuntu", "Fedora", "Arch"],
+            text: "Wszystkie tricki, które potrafię w terminalu.",
+            tags: ["Debian", "Proxmox", "Docker", "Rhel"],
 
             detail: {
               title: "Linux",
-              lead: "Najlepiej czuję się wtedy, gdy mogę wejść poziom niżej i zrozumieć, dlaczego coś działa albo nie działa.",
+              lead: "Z Linuxem mam doświadczenie od wielu lat i praktycznie na, co dzień korzystam z terminala. Mój laptop (na, którym stworzyłem tę stronę) od paru dobrych miesięcy działa pod kontrolą Fedory (systemu powiązanego bezpośrednio z RHEL). Na moim miniPC korzystam za to z Proxmoxa, który to jest podwaliną dla całego mojego Homelaba. Gdzieś w tym wszystkim znajduje się jeszcze Raspberry Pi, Router z otwartym system OpenWRT i parę innych osobistych urządzeń, na których teoretycznie Linux, nigdy nie powinien się znaleźć. Jeżel chodzi o Linuxa W środowisku zawodowym, to miałem przyjemnośc zarządzać klastrem Proxmox'a z łącznie 3-nodami (bez CEPH) oraz konfigurować postawione na nim wirtualne maszyny oraz kontenery korzystające właśnie z systemu Linux",
               sections: [
-                {
-                  heading: "Praktyka",
-                  body: "Zarządzanie usługami, użytkownikami i uprawnieniami, siecią, logami, SSH, kontenerami oraz podstawową automatyzacją."
-                },
-                {
-                  heading: "Co rozwijam",
-                  body: "Coraz więcej czasu poświęcam na IaC, monitoring, niezawodność usług i powtarzalne wdrożenia."
-                }
               ],
               list: [
-                "systemd i journald",
-                "SSH + klucze",
-                "Docker / Compose",
-                "Btrfs",
-                "sieci Linux",
-                "troubleshooting"
+                {text: "Najważniejsze umiejętności związane z Linuxem", bold: true},
+                "Zarządzanie przez SSH + SFTP",
+                "Obsługa Terminala",
+                "Docker i Docker Compose",
+                "Proxmox",
+                "Konfiguracja Firewalla, Routingu i innych aspektów sieciowych na Linuxie",
+                "troubleshooting",
+                "Git i wersjonowanie",
+                "Instalacja i konfiguracja",
+                "Zarządzanie użytkownikami i uprawnieniami",
+                "Uruchamianie usług",
+                "Planowanie zadań (np. przez Cron)",
+                "Tworzenie skryptów Bashowych"
               ],
               media: [
                 { type: "image", src: "", alt: "Miejsce na zrzut ekranu terminala" },
@@ -85,7 +84,7 @@ const EDITABLE_PORTFOLIO = {
           {
             eyebrow: "SKILLS / 02",
             title: "Sieci",
-            text: "Od VLAN-ów i routingu po VPN-y, DNS i dostęp między lokalizacjami.",
+            text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
             tags: ["VLAN", "VPN", "DNS", "Routing"],
 
             detail: {
@@ -117,7 +116,33 @@ const EDITABLE_PORTFOLIO = {
 
           {
             eyebrow: "SKILLS / 03",
-            title: "Automatyzacja",
+            title: "WWW i Proxy",
+            text: "Małe skrypty i powtarzalne procesy, które oszczędzają czas.",
+            tags: ["Bash", "PowerShell", "Git"],
+
+            detail: {
+              title: "Automatyzacja",
+              lead: "Automatyzuję przede wszystkim to, co wykonuje się często, według tych samych kroków i co łatwo niechcący zrobić ręcznie źle.",
+              sections: [
+                {
+                  heading: "Narzędzia",
+                  body: "Bash, PowerShell, Git oraz proste pipeline'y CI/CD tam, gdzie dają realną wartość."
+                }
+              ],
+              list: [
+                "skrypty administracyjne",
+                "wdrożenia",
+                "backupy",
+                "masowe konfiguracje",
+                "Git / CI",
+                "diagnostyka"
+              ],
+              media: []
+            }
+          },
+          {
+            eyebrow: "SKILLS / 04",
+            title: "WWW i Proxy",
             text: "Małe skrypty i powtarzalne procesy, które oszczędzają czas.",
             tags: ["Bash", "PowerShell", "Git"],
 
