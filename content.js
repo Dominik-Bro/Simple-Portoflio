@@ -397,28 +397,23 @@ const EDITABLE_PORTFOLIO = {
           {
             eyebrow: "EXPERIENCE / 03",
             title: "Asystent",
-            text: "Wirtualizacja, sieć, storage i usługi, które muszą po prostu działać.",
-            tags: ["Proxmox", "Storage", "Monitoring"],
+            text: "Zarządzenie stroną i produktami sklepu magcomplex",
+            tags: ["CMS", "Wordpress", "Allegro", "Gimp"],
 
             detail: {
-              title: "Infrastruktura",
-              lead: "Najciekawsze są dla mnie systemy, w których pojedynczy serwer to dopiero początek — liczy się sposób połączenia wszystkiego w całość.",
+              title: "Asystent ds. platform internetowych ",
+              lead: "W tej pracy zarządzałem dedykowanym sklepem Internetowym (opartym o Worpdressa + Woccomerce) oraz kontami na niektórych marketplace (Allegro, Olx) dla firmy mag-complex zajmującej się produkcją i importem regałów magazynowych oraz stołów warsztatowych.",
               sections: [
-                {
-                  heading: "Praktyka",
-                  body: "Proxmox, kontenery, monitoring, reverse proxy, DNS, storage oraz usługi uruchamiane w Docker Compose."
-                }
               ],
               list: [
-                "Proxmox",
-                "LXC",
-                "Docker Compose",
-                "Nginx",
-                "Zabbix",
-                "Grafana"
+                {text: "Czas pracy: 06.2025 - 09.2025", bold: true},
+                {text: "Najważniejsze zadania:", bold:true},
+                "Administracja sklepem internetowym mag-complex.pl (WordPress + WooCommerce): zarządzanie produktami, opisami i zasobami graficznymi",
+                "Zarządzanie firmową stroną – tworzenie nowych podstron, aktualizacja treści",
+                "Prowadzenie profili sprzedażowych na platformach Allegro i OLX",
+                "Tworzenie i edycja grafik produktowych (GIMP)"
               ],
               media: [
-                { type: "image", src: "", alt: "Miejsce na schemat infrastruktury" }
               ]
             }
           }
