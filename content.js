@@ -374,28 +374,21 @@ const EDITABLE_PORTFOLIO = {
             eyebrow: "EXPERIENCE / 02",
             title: "Copywriter",
             text: "Tworzenie i zarządzanie treściami na stronie Internetowej refabryka.pl",
-            tags: ["AD", "GPO", "Windows Server", "Linux"],
+            tags: ["Copywriting", "HTML", "Wordpress"],
 
             detail: {
-              title: "Administracja systemami",
-              lead: "Łączę codzienną administrację z ciągłym porządkowaniem środowiska, żeby mniej rzeczy wymagało ręcznej interwencji.",
+              title: "Copywriter w firmie iSerwris",
+              lead: "Pozycja Copywrtiera w firmie iSerwis to moja pierwsza stała współpraca, którą zawarłem po paru wcześniejszych freelancerskich doświadczeniach. W ramach ów współpracy moim głównym zadaniem było tworzenie, modyfikowanie oraz publikowanie treści na stronie refabryka.pl. W tej pracy, często konieczne było przeprowadzenie dogłębnego researchu, by dokładnie zgłębić dany temat. Takie doświadczenie na pewno mocno odbiło się też na wszystkich moich kolejnych współpracach w nieco innych dziedzinach. W zależności od konkretnej daty i stanu strony, do publikacji i edycji treści wykorzystywałem tutaj CMS Wordpress bądź też czysty HTML",
               sections: [
-                {
-                  heading: "Zakres",
-                  body: "Active Directory, GPO, instalacje zdalne, usługi Windows/Linux, udziały sieciowe i podstawowe procedury awaryjne."
-                },
-                {
-                  heading: "Podejście",
-                  body: "Najpierw obserwowalność i powtarzalność, potem dokładanie kolejnej warstwy automatyzacji."
-                }
               ],
               list: [
-                "AD",
-                "GPO",
-                "PXE",
-                "iDRAC",
-                "NAS",
-                "usługi Linux"
+                {text: "Czas pracy: 10.2022 - 09.2026", bold: true},
+                {text: "Najważniejsze zadania:", bold:true},
+                "Tworzenie treści technicznych i rozrywkowych na tematy okołotechnologiczne",
+                "Publikowanie treści na stronie Internetowej (np. przez CMS Wordpress)",
+                "Wprowadzanie prostych zmian wyglądu i zachowania strony",
+                "Osadzanie obrazków oraz wideo na stronie, w wyznaczonych sekcjach",
+                "Optymalizacja treści pod pozycję w wyszukiwarce"
               ],
               media: []
             }
