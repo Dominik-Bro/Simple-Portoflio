@@ -422,7 +422,7 @@ const EDITABLE_PORTFOLIO = {
       {
         eyebrow: "03 / PROJECTS",
         title: "Projekty",
-        text: "Rzeczy, które zrobiłem w pracy i prywatnide",
+        text: "Rzeczy, które zrobiłem w pracy i prywatnie",
         tags: ["Wdrożenia", "Homelab", "Hobby"],
 
         children: [
