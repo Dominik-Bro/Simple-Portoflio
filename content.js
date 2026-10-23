@@ -84,24 +84,29 @@ const EDITABLE_PORTFOLIO = {
             eyebrow: "SKILLS / 02",
             title: "Windows",
             text: "Małe skrypty i powtarzalne procesy, które oszczędzają czas.",
-            tags: ["Bash", "PowerShell", "Git"],
+            tags: ["Windows", "AD", "LDAP", "RDP"],
 
             detail: {
-              title: "Automatyzacja",
-              lead: "Automatyzuję przede wszystkim to, co wykonuje się często, według tych samych kroków i co łatwo niechcący zrobić ręcznie źle.",
+              title: "Windows (Server)",
+              lead: "W swojej pracy i życiu codziennym, często mam do czyniania z systemami od firmy Microsoft, czyli różnymi wariantami Windowsa. Oprócz banalnych rzeczy polegających na obłudze komputera, instalacji aplikacji, instalacji sterowników, zmianie ustawień itp. mam też doświadczenie z bardziej zaawansowanymi czynnościami, na przykład z: tworzeniem skrytpów automatyzujących poszczególne działnia, obsługą Active Directory oraz GPO, zarządzeniem stronami hostowanymi przez IIS, tworzeniem nowych share'ów SMB, konfiguracją lokalnego DNS'a, czy też obsługą Hyper-V. W przypadku Active Directory zajmowałem się już między innymi dodawaniem nowych użytkowników i przypisywaniem ich do konkretych OU, dodawaniem użytkowników do poszczególnych grup, nadawaniem grupom konretnych uprawnień (np. dostęp do danego Share'a SMB, czy połączeń RDP), oraz integracją LDAP z innymi usługami (np. Synology NAS, czy NextCloud).",
               sections: [
                 {
-                  heading: "Narzędzia",
-                  body: "Bash, PowerShell, Git oraz proste pipeline'y CI/CD tam, gdzie dają realną wartość."
                 }
               ],
               list: [
-                "skrypty administracyjne",
-                "wdrożenia",
-                "backupy",
-                "masowe konfiguracje",
-                "Git / CI",
-                "diagnostyka"
+                "Obsługa komputera",
+                "Diagnoza i rozwiązywanie problemów",
+                "Backupy",
+                "Obsługa Active Directory",
+                "Integracje przez LDAP",
+                "Konfiguracja lokalnego DNS",
+                "Skrypty automatyzujące Power Shell",
+                "Hyper-V",
+                "IIS",
+                "GPO",
+                "Integracje z LDAP",
+                "RDP",
+                "SMB/NFS",
               ],
               media: []
             }
