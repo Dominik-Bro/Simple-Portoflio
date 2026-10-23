@@ -69,7 +69,7 @@ const EDITABLE_PORTFOLIO = {
                 "troubleshooting",
                 "Git i wersjonowanie",
                 "Instalacja i konfiguracja",
-                "Zarządzanie użytkownikami i uprawnieniami",
+                "Zarządzanie użytkownikami i uprawnigoogeniami",
                 "Uruchamianie usług",
                 "Planowanie zadań (np. przez Cron)",
                 "Tworzenie skryptów Bashowych"
@@ -120,27 +120,21 @@ const EDITABLE_PORTFOLIO = {
 
             detail: {
               title: "Sieci",
-              lead: "Lubię budować sieci tak, żeby ich zachowanie było przewidywalne, łatwe do diagnozowania i sensownie odseparowane.",
+              lead: "Zarządzanie siecią to chyba jedna z moich ulubionych czynności 'adminstracyjnych' zarówno w środowisku profesjonalnym, jak i we własnym domu. Konfiguracja nowych urządzeń sieciowych (np. routerów i Switchy) wraz z nadawaniem im IP i przypisywaniem do konkretnych vLAN'ów, segmentacja sieci, własnie na vLAN'y i konfiguracja zasad dozwolnych połączeń w firewallu, udostępnianie usług publicznie przez port forwarding, tworzenie nowych połączeń VPN (od site-client, przez site-site, aż po Mesh), konfiguracja routingu, czy DNS'a, to wszystko w czym się odnajduję, lubię i myślę, że wychodzi mi naturalnie ;)",
               sections: [
-                {
-                  heading: "Praktyka",
-                  body: "Konfiguracja VLAN, routingu, DHCP/DNS, tuneli WireGuard oraz dostępu do zasobów wewnętrznych."
-                },
-                {
-                  heading: "Następny poziom",
-                  body: "Więcej routingu dynamicznego, segmentacji i wysokiej dostępności."
-                }
               ],
               list: [
                 "VLAN / trunk",
-                "WireGuard",
-                "DNS / DHCP",
-                "NAT",
-                "firewalle",
-                "site-to-site"
+                "Konfiguracja serwerów VPN (np. WireGuard)",
+                "DNS",
+                "DHCP",
+                "Port forwarding i zarządzanie NAT'em",
+                "Konfiguracja zasad Firewalla do prawidłowej segmentacji sieci",
+                "VPN Site-Site oraz Mesh",
+                "Routing",
+                "Konfiguracja nowych urządzeń sieciowych (np. od Ubiquitii, Mikrotik, czy opartych o oprogramowanie OpenWRT",
               ],
               media: [
-                { type: "image", src: "", alt: "Miejsce na diagram sieci" }
               ]
             }
           },
