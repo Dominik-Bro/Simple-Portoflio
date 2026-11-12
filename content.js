@@ -232,31 +232,23 @@ const EDITABLE_PORTFOLIO = {
             eyebrow: "SKILLS / 07",
             title: "Wordpress",
             text: "Stawianie i zarządzenie stronami postawionymi na Wordpressie",
-            tags: ["Wordpress", "Woocommerc", "Zarządzenie treścią"],
+            tags: ["Wordpress", "Woocommerce", "Zarządzenie treścią"],
 
             detail: {
-              title: "Sieci",
-              lead: "Lubię budować sieci tak, żeby ich zachowanie było przewidywalne, łatwe do diagnozowania i sensownie odseparowane.",
+              title: "Wordpress",
+              lead: "Przy pracy jako Copywriter, Asystent, czy Administrator nierzadko miałem do czynienia z CMS Wordpress. Początkowo mój kontakt z Wordpress zaczął się 'Niewiine' - Wdrażanie prostych poprawek na stronie, aktualizacja szablonów, dodawanie nowych wpisów na blogu, produktów, czy też opisów. W późniejszym czasie musiałem się jednak z Wordpressem i Woocomerce zaznajomić nieco głepięj, by tworzyć od zera całkiem nowe podstrony, prowadzić migrację stron na inny hosting/VPS, czy też tworzyć nowe Wordpressowe witryny. Czy powiedziałbym, że znam Wordpressa najlepiej na świecie? Pewnie nie. Jednak znam go na tyle dobrze, by komfortowo wykonać na Wordpressowych stronach zdecydowaną większość czynności",
               sections: [
-                {
-                  heading: "Praktyka",
-                  body: "Konfiguracja VLAN, routingu, DHCP/DNS, tuneli WireGuard oraz dostępu do zasobów wewnętrznych."
-                },
-                {
-                  heading: "Następny poziom",
-                  body: "Więcej routingu dynamicznego, segmentacji i wysokiej dostępności."
-                }
               ],
               list: [
-                "VLAN / trunk",
-                "WireGuard",
-                "DNS / DHCP",
-                "NAT",
-                "firewalle",
-                "site-to-site"
+                "Tworzenie i dodawanie opisów produktów",
+                "Wystawienie nowych produktuów przez Woocommerce",
+                "Migracja stron postawionych na Wordpressie",
+                "Tworzenie Wordpressowych stron od zera",
+                "Rozwiązanie problemów z funkcjonalnością witrny",
+                "Aktualizacja Wordpressa i koniecznych do jego działania składników (Serwer WWW, PHP, baza danych, ewentualne Reverse Proxy),"
               ],
               media: [
-                { type: "image", src: "", alt: "Miejsce na diagram sieci" }
+
               ]
             }
           },
