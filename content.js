@@ -165,38 +165,6 @@ const EDITABLE_PORTFOLIO = {
           },
           {
             eyebrow: "SKILLS / 05",
-            title: "Serwery",
-            text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
-            tags: ["VLAN", "VPN", "DNS", "Routing"],
-
-            detail: {
-              title: "Sieci",
-              lead: "Lubię budować sieci tak, żeby ich zachowanie było przewidywalne, łatwe do diagnozowania i sensownie odseparowane.",
-              sections: [
-                {
-                  heading: "Praktyka",
-                  body: "Konfiguracja VLAN, routingu, DHCP/DNS, tuneli WireGuard oraz dostępu do zasobów wewnętrznych."
-                },
-                {
-                  heading: "Następny poziom",
-                  body: "Więcej routingu dynamicznego, segmentacji i wysokiej dostępności."
-                }
-              ],
-              list: [
-                "VLAN / trunk",
-                "WireGuard",
-                "DNS / DHCP",
-                "NAT",
-                "firewalle",
-                "site-to-site"
-              ],
-              media: [
-                { type: "image", src: "", alt: "Miejsce na diagram sieci" }
-              ]
-            }
-          },
-          {
-            eyebrow: "SKILLS / 06",
             title: "Wirtualizacja",
             text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
             tags: ["VLAN", "VPN", "DNS", "Routing"],
@@ -228,7 +196,7 @@ const EDITABLE_PORTFOLIO = {
             }
           },
           {
-            eyebrow: "SKILLS / 07",
+            eyebrow: "SKILLS / 06",
             title: "Sprzęt",
             text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
             tags: ["VLAN", "VPN", "DNS", "Routing"],
@@ -261,10 +229,10 @@ const EDITABLE_PORTFOLIO = {
           },
           
           {
-            eyebrow: "SKILLS / 08",
+            eyebrow: "SKILLS / 07",
             title: "Wordpress",
-            text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
-            tags: ["VLAN", "VPN", "DNS", "Routing"],
+            text: "Stawianie i zarządzenie stronami postawionymi na Wordpressie",
+            tags: ["Wordpress", "Woocommerc", "Zarządzenie treścią"],
 
             detail: {
               title: "Sieci",
@@ -293,7 +261,7 @@ const EDITABLE_PORTFOLIO = {
             }
           },
           {
-            eyebrow: "SKILLS / 09",
+            eyebrow: "SKILLS / 08",
             title: "Copyrwriting",
             text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
             tags: ["VLAN", "VPN", "DNS", "Routing"],
