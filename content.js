@@ -132,7 +132,7 @@ const EDITABLE_PORTFOLIO = {
                 "Konfiguracja zasad Firewalla do prawidłowej segmentacji sieci",
                 "VPN Site-Site oraz Mesh",
                 "Routing",
-                "Konfiguracja nowych urządzeń sieciowych (np. od Ubiquitii, Mikrotik, czy opartych o oprogramowanie OpenWRT",
+                "Konfiguracja nowych urządzeń sieciowych (np. od Ubiquitii, Mikrotik, czy opartych o oprogramowanie OpenWRT)",
               ],
               media: [
               ]
@@ -142,25 +142,23 @@ const EDITABLE_PORTFOLIO = {
           {
             eyebrow: "SKILLS / 04",
             title: "WWW i Proxy",
-            text: "Małe skrypty i powtarzalne procesy, które oszczędzają czas.",
-            tags: ["Bash", "PowerShell", "Git"],
+            text: "Strony Internetowe, Dashboardy, Domeny, SSL, i inne związane z WWW",
+            tags: ["Nginx", "Apache", "Reverse Proxy", "SSL/TLS"],
 
             detail: {
-              title: "Automatyzacja",
-              lead: "Automatyzuję przede wszystkim to, co wykonuje się często, według tych samych kroków i co łatwo niechcący zrobić ręcznie źle.",
+              title: "WWW i Proxy",
+              lead: "Podczas swoich prac hobbistycznych i 'Profesjonalny', dość często konfiguruję usługi powiązane ze stronami WWW. Mowa tutaj np. o konfiguracji serwera Nginx/Apache przy migracji strony postawionej na Wordpressie, wygenerowanie prawidłowego certyfikatu SSL/TLS dla domeny, postawienie serwera WWW za Reverse Proxy, aby tenże SSL prawidłowo terminować i zapewnić jakąś formę load balancingu i o wszystkich innych rzeczach, które trzeba wykonać by od koncepcji strony przejść do jej opublikowania w sieci LAN bądź WAN.",
               sections: [
-                {
-                  heading: "Narzędzia",
-                  body: "Bash, PowerShell, Git oraz proste pipeline'y CI/CD tam, gdzie dają realną wartość."
-                }
               ],
               list: [
-                "skrypty administracyjne",
-                "wdrożenia",
-                "backupy",
-                "masowe konfiguracje",
-                "Git / CI",
-                "diagnostyka"
+                "Konfiuracja serwerów WWW (np. Nginx i Apache)",
+                "Konfiguracja Reverse Proxy",
+                "Ustawienie TLS/SSL",
+                "Zarządzenia domenami i subdomenami",
+                "Prawidłowa Konfigruacja DNS",
+                "Cloudflare",
+                "Ustawienie 2FA przy wejściu na strone (np. poprzez narzędzia od Cloudflare)",
+                "Loadbalancing",
               ],
               media: []
             }
