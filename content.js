@@ -232,7 +232,7 @@ const EDITABLE_PORTFOLIO = {
             eyebrow: "SKILLS / 07",
             title: "Wordpress",
             text: "Stawianie i zarządzenie stronami postawionymi na Wordpressie",
-            tags: ["Wordpress", "Woocommerce", "Zarządzenie treścią"],
+            tags: ["Wordpress", "Woocommerce", "Treść"],
 
             detail: {
               title: "Wordpress",
@@ -259,28 +259,17 @@ const EDITABLE_PORTFOLIO = {
             tags: ["VLAN", "VPN", "DNS", "Routing"],
 
             detail: {
-              title: "Sieci",
-              lead: "Lubię budować sieci tak, żeby ich zachowanie było przewidywalne, łatwe do diagnozowania i sensownie odseparowane.",
+              title: "Copywriting",
+              lead: "Od dłuższego czasu tworzę treści w Internecie na tematy technologiczne. Moje artykuły pojawiały się między innymi na stronach Komputronika, oficjalnego sklepu Hama, czy też na portalu techpolska.pl. W swoich artykułach dzieliłem się głównie moją wiedzą techniczną na temat sprzętu i technologii. Doświadczenie jaki copywriter/redaktor dało mi podwaliny pod prowadzenie researchu oraz tworzenie czytelnej dokumentacji w późniejszych pracach związanych już bardziej z IT",
               sections: [
-                {
-                  heading: "Praktyka",
-                  body: "Konfiguracja VLAN, routingu, DHCP/DNS, tuneli WireGuard oraz dostępu do zasobów wewnętrznych."
-                },
-                {
-                  heading: "Następny poziom",
-                  body: "Więcej routingu dynamicznego, segmentacji i wysokiej dostępności."
-                }
               ],
               list: [
-                "VLAN / trunk",
-                "WireGuard",
-                "DNS / DHCP",
-                "NAT",
-                "firewalle",
-                "site-to-site"
+                "Copywriting",
+                "Research",
+                "Dokumentacja",
+                "CMS"
               ],
               media: [
-                { type: "image", src: "", alt: "Miejsce na diagram sieci" }
               ]
             }
           },
