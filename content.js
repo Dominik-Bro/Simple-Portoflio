@@ -486,7 +486,7 @@ const EDITABLE_PORTFOLIO = {
               title: "Kontakt",
               lead: "Jeżeli portfolio, Cię zainteresowało i chcesz porozmawiać, to można mnie znaleźć pod telefon i adresem email:",
               list: [
-                "Tel: XXX",
+                "Tel: 514 307 124",
                 "email: dominikbroszczak@proton.me",
               ],
               media: []
