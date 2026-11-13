@@ -198,32 +198,22 @@ const EDITABLE_PORTFOLIO = {
           {
             eyebrow: "SKILLS / 06",
             title: "Sprzęt",
-            text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
-            tags: ["VLAN", "VPN", "DNS", "Routing"],
+            text: "Diagnoza i naprawa sprzętu komputerowego (i nie tylko)",
+            tags: ["PC", "Dignoza", "Naprawa", "Modyfikacje"],
 
             detail: {
-              title: "Sieci",
-              lead: "Lubię budować sieci tak, żeby ich zachowanie było przewidywalne, łatwe do diagnozowania i sensownie odseparowane.",
+              title: "Sprzęt",
+              lead: "Praktycznie od małego interesowałem się sprzętem komputerowym i tym, jak on działa. Swój pierwszy komputer złożyłem samodzielnie w wieku 13 lat i od tego czasu moje doświadczenie w dignozowaniu i zajmowaniu się sprzętem tylko urosło. W swojej hobbystycznej 'karierze' naprawiałem już komputery, laptopy, telefony czy konsole. Modyfikowałem urządzenia, aby wyglądały i działały inaczej, albo oferowały porty, które nie były domyślnie dostępne (przykład: port USB-C w starych konsolach takich, jak PSP) i do dziś uważam to za zadania angażujące i satysfakcjonujące.",
               sections: [
-                {
-                  heading: "Praktyka",
-                  body: "Konfiguracja VLAN, routingu, DHCP/DNS, tuneli WireGuard oraz dostępu do zasobów wewnętrznych."
-                },
-                {
-                  heading: "Następny poziom",
-                  body: "Więcej routingu dynamicznego, segmentacji i wysokiej dostępności."
-                }
               ],
               list: [
-                "VLAN / trunk",
-                "WireGuard",
-                "DNS / DHCP",
-                "NAT",
-                "firewalle",
-                "site-to-site"
+                "Diagnoza i naprawa sprzętu",
+                "Wprowadzanie modyfikacji sprzętówych",
+                "Lutowanie",
+                "Posługiwanie się mulimetrem",
+                "Projektowanie i druk 3D",
               ],
               media: [
-                { type: "image", src: "", alt: "Miejsce na diagram sieci" }
               ]
             }
           },
