@@ -166,32 +166,26 @@ const EDITABLE_PORTFOLIO = {
           {
             eyebrow: "SKILLS / 05",
             title: "Wirtualizacja",
-            text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
-            tags: ["VLAN", "VPN", "DNS", "Routing"],
+            text: "Wirtualizacja i konteneryzacja do właściwego rozdzielenia zasobów",
+            tags: ["Proxmox", "Docker", "Hyper-V", "Podman"],
 
             detail: {
-              title: "Sieci",
-              lead: "Lubię budować sieci tak, żeby ich zachowanie było przewidywalne, łatwe do diagnozowania i sensownie odseparowane.",
+              title: "Wirtualizacja",
+              lead: "Większość wykonywanych przeze mnie profesjonalnych, czy hobbistycznych projektów nie byłaby możliwa bez zastosowania wirtualizacji do prawidłowego rozdzielenia i oddzielenia zasobów dostępnych na serwerze/komputerze. Jeśli chodzi o wybór Hypervisora to na co dzień w swoim Home Labie korzystam z Proxmoxa, na którym pracuje łącznie około 10 VM'ów/kontenerów LXC i na którym skonfigurowałem automatyczne tworzenie backupów do mojego dysku NAS oraz kopię lustrzaną na drugi dysk obecny w komputerze poprzez Pool ZFS. Z Proxmoxem miałem też już do czynienia w środowisku profesjonalny, gdyż jako Administrator zarządzałem Proxmox'owym klastrem składającym się z dedykowany serwerów. Idąc nieco 'niżej' Do uruchamiania pojedycznych usług zazwyczaj wykorzystuję Docker'a/Docker Compose, ale na niektórych specyficznych platformach korzystałem też z Podmana. Z innymi Hypervisorami (takimi jak Hyper-V) moje doświadzenie jest na pewno nieco mniejsze niż z Proxmoxem, jednak miałem już przyjemność tworzyć VM, konfigurować Snapshoty, tagować  zasoby konkretnymi vLAN'ami (co umożliwiało ich odpowiednie oddzielenie), czy też migrować zasoby z Hyper-V, do mojego preferowanego Hypervisora, czyli właśnie do Proxmoxa. ",
               sections: [
-                {
-                  heading: "Praktyka",
-                  body: "Konfiguracja VLAN, routingu, DHCP/DNS, tuneli WireGuard oraz dostępu do zasobów wewnętrznych."
-                },
-                {
-                  heading: "Następny poziom",
-                  body: "Więcej routingu dynamicznego, segmentacji i wysokiej dostępności."
-                }
               ],
               list: [
-                "VLAN / trunk",
-                "WireGuard",
-                "DNS / DHCP",
-                "NAT",
-                "firewalle",
-                "site-to-site"
+                "Proxmox",
+                "Hyper-V",
+                "Docker i Docker Compose",
+                "Podman",
+                "Tworzenie Snapshotów",
+                "Tworzenie i setup automatycznych backupów",
+                "Migracja VM i kontenerów",
+                "ZFS Pool wraz z kopią lustrzaną",
+                "Tagowanie vLAN'ów dla VM/Kontenerów"
               ],
               media: [
-                { type: "image", src: "", alt: "Miejsce na diagram sieci" }
               ]
             }
           },
