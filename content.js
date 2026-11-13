@@ -255,8 +255,8 @@ const EDITABLE_PORTFOLIO = {
           {
             eyebrow: "SKILLS / 08",
             title: "Copyrwriting",
-            text: "Od VLAN-ów i routingu po VPN-y, DNS i separacje sieci.",
-            tags: ["VLAN", "VPN", "DNS", "Routing"],
+            text: "Tworzenie treści na portale Internetowe i dokumentacji",
+            tags: ["Copywriting", "Research", "Dokumentacja"],
 
             detail: {
               title: "Copywriting",
