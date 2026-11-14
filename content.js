@@ -375,7 +375,7 @@ const EDITABLE_PORTFOLIO = {
                 "Shostowanie strony lokalnie przy pomocy stacka LEMP z wykorzystaniem Docker Compose",
                 "Konfiguracja lokalnego reverse Proxy oraz DNS w celu prawdiłowej terminacji SSL/TLS",
                 "Wprowadzenie zmian na stronie: optymalizacja grafik, zmiany w problematycznych plikach motywów powodujących błędy, etc.",
-                "Stworzenie kopii zapasowej lokalnej kopii strony",
+                "Stworzenie kopii zapasowej lokalnej wersji strony",
                 "Przeniesienie strefy DNS do Cloudflare wraz z prawidłowym ustawieniem rekordów DNS",
                 "Konfiguracja Wordpressa na nowym Hostingu",
                 "Przywrócenie kopii zapasowej strony na nowym hostingu",
