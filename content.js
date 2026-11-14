@@ -359,29 +359,31 @@ const EDITABLE_PORTFOLIO = {
         children: [
           {
             eyebrow: "PROJECTS / 01",
-            title: "Web",
-            text: "Strony i migracje WordPress → statyczne wdrożenia, z naciskiem na wydajność.",
-            tags: ["HTML", "CSS", "JS", "WordPress"],
+            title: "Migracja Strony",
+            text: "Zmiany stron + przeniesienie jej na inny hosting",
+            tags: ["Wordpress", "Docker", "SSL/TLS", "Cloudflare"],
 
             detail: {
-              title: "Web",
-              lead: "Interesuje mnie web, gdy można połączyć prosty frontend z porządną infrastrukturą i kontrolą nad całym wdrożeniem.",
+              title: "Migracja Wordpressowej strony",
+              lead: "Jednym z mniejszych i szybszych projektów, którym się zajmowałem była migracja strony pantor.com.pl Zadanie to było wykonywane, by ograniczyć wysokie koszta ówczesnego hostingu. W tym celu został dobrany więc nowy, znacznie tańszy hosting, a następnie strona została przezemnie zmodyfikowana (by poprawić jej responsywność), przetestowana lokalnie i finalnie przeniesiona na hosting od nowego dostawcy.",
               sections: [
-                {
-                  heading: "Przykłady",
-                  body: "WordPress, WooCommerce, Cloudflare, statyczne generatory oraz własne rozwiązania bez dokładania pluginu do każdej funkcji."
-                }
               ],
               list: [
-                "HTML / CSS",
-                "JavaScript",
-                "WordPress",
-                "WooCommerce",
-                "Cloudflare",
-                "SEO techniczne"
+                {text: "Wykonane zadania:", bold: true},
+                "Wybór tańszego hostingu",
+                "Stworzenie kopii zapasowej strony wraz z jej bazą danych",
+                "Shostowanie strony lokalnie przy pomocy stacka LEMP z wykorzystaniem Docker Compose",
+                "Konfiguracja lokalnego reverse Proxy oraz DNS w celu prawdiłowej terminacji SSL/TLS",
+                "Wprowadzenie zmian na stronie: optymalizacja grafik, zmiany w problematycznych plikach motywów powodujących błędy, etc.",
+                "Stworzenie kopii zapasowej lokalnej kopii strony",
+                "Przeniesienie strefy DNS do Cloudflare wraz z prawidłowym ustawieniem rekordów DNS",
+                "Konfiguracja Wordpressa na nowym Hostingu",
+                "Przywrócenie kopii zapasowej strony na nowym hostingu",
+                "Potwierdzenie fucnkjonowania wszelkich funkcji przy wykorzystaniu z lokalnego rekordu DNS kierującego na IP hostingu",
+                "Finalna zmiana rekordów DNS w panelu Cloudflare",
+                "Rezygnacja ze wcześniejszego hostingu",
               ],
               media: [
-                { type: "image", src: "", alt: "Miejsce na screen strony" }
               ]
             }
           },
