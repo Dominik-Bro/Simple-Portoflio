@@ -417,26 +417,25 @@ const EDITABLE_PORTFOLIO = {
 
           {
             eyebrow: "PROJECTS / 03",
-            title: "Eksperymenty",
-            text: "Małe projekty sprzętowe, Linux, ESP32 i nietypowe problemy, które są zbyt ciekawe, żeby je zostawić.",
-            tags: ["ESP32", "Hardware", "Linux"],
+            title: "Zmiana dostawcy Internetu",
+            text: "Zmiana dostawcy Internetu dla zapasowego złącza w firmie",
+            tags: ["VPN", "Ubiquiti", "DNS"],
 
             detail: {
-              title: "Eksperymenty",
-              lead: "Najwięcej uczę się na rzeczach, których nie ma w tutorialu krok po kroku.",
+              title: "Zmiana dostawcy Internetu",
+              lead: "Jedną z rzeczy którą się zajmowałem/którą koordynowałem jako Administrator IT, byla zmiana zapsowego złącza w firmie oraz późniejsze prace z tym związane (Konfiguracja Failover na Routerze Ubiquiti, zmiany w usługach lokalnych publikowanych do sieci WAN (np. VPN), czy konfiguracja DDNS)",
               sections: [
                 {
-                  heading: "Typowe kierunki",
-                  body: "ESP32, małe urządzenia, nietypowe systemy Linux, naprawy sprzętu i testowanie granic istniejących rozwiązań."
                 }
               ],
               list: [
-                "ESP32",
-                "mikrokontrolery",
-                "Linux",
-                "naprawy",
-                "reverse engineering",
-                "prototypy"
+                {text: "Wykonane zadania:", bold: true},
+                "Wstępna konfiguracja usługi na Routerze Ubiquiti",
+                "Prawidłowe ustawienie trybu Failover na Routerze",
+                "Przypisanie głównego publicznego adresu IP do publicznie dostępnej subdomeny",
+                "Konfiguracja DDNS - gdy Router przejdzie w tryb failover, IP przypisane do publicznej subdomeny samoistnie się zmienia",
+                "Zmiana konfiguracji lokalnego serwera VPN (Wireguard)",
+                "Wysłanie użytkownikom odpowiednio zabezpieczonych plików, z konfiguracją Wireguarda, zaiwerających adres domeny zamiast statycznego IP, dzięki temu nawet po przejściu do trybu Failover, użytkownik wciąż może połączyć się do serwera VPN",
               ],
               media: []
             }
