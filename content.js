@@ -390,29 +390,27 @@ const EDITABLE_PORTFOLIO = {
 
           {
             eyebrow: "PROJECTS / 02",
-            title: "Homelab",
-            text: "Własne środowisko do testowania sieci, kontenerów, usług i automatyzacji.",
-            tags: ["Self-hosting", "Docker", "VPN"],
+            title: "Wdrożenie NextCloud",
+            text: "Shostowanie i wdrożenie pakietu NextCloud + sync LDAP",
+            tags: ["Docker", "Reverse Proxy", "LDAP", "MFA"],
 
             detail: {
-              title: "Homelab",
-              lead: "Homelab jest moim poligonem doświadczalnym: mogę testować rozwiązania, psuć je, odtwarzać i dokumentować bez wpływu na produkcję.",
+              title: "Wdrożenie NextCloud",
+              lead: "NextCloud to popularna rozwiązanie OpenSource będące alternatywą dla rozwiązań takich, jak Microsoft 365, czy Google Workspace. Moim zadaniem, było shostowanie NextCloud'a na lokalnych serwerach firmy, zsynchronizowanie użytkowników  usługi z Active Directory przez LDAP, synchronizacja z lokalnymi Share'ami SMB działającymi na Nasie Synology oraz wystawienie usługi do Internetu wraz z jednoczesnym zabezpieczeni witryny przez MFA.",
               sections: [
-                {
-                  heading: "Przykładowe usługi",
-                  body: "Reverse proxy, DNS, Jellyfin, automatyzacja, monitoring, kontenery, VPN oraz zdalny dostęp."
-                }
               ],
               list: [
-                "Proxmox",
-                "Docker",
-                "WireGuard",
-                "AdGuard Home",
-                "Jellyfin",
-                "monitoring"
+                {text: "Wykonane zadania:", bold: true},
+                "Utworzenie nowego kontenera LXC z Debianem na Proxmoxie",
+                "Wstępne konfiguracja kontenera LXC (instalacja Dockera, dodanie nowego użytkownika, dodanie użytkownika do grupy Sudo oraz Docker, aktualizacja systemu, etc.)",
+                "Shostowanie usług NextCloud przez Docker Compose",
+                "Konfiguracja Nginx Rerse Proxy, lokalnego DNS oraz zmiana ustawień NextClouda, by prawidłowo terminować SSL/TLS i przypisać domenę do witryny NextCloud",
+                "Ustawienie synchronizacji LDAP w NextCloud, by użytkownicy i grupy były automatycznie zaciągane z lokalnego serwera Active Directory",
+                "Dodanie lokalnego Share'a SMB do NextCloud i prawidłowe ustawienie dostępów (dany użytkownik widzi tylko wybrane folderu, a nie całą zawartość Share'a)",
+                "Stworzenie dokumentacji i serii instrukcji dla użytkowników",
+                "Udostępnienie witryny z NextCloud w Internecie przez usługę CloudFlare Tunnel i zabezpieczenie jej przez system MFA od CloudFlare. W efekcie (wraz ze zmianami w lokalnym DNS): gdy osoba loguje się na terenie firmy, musi podać tylko dane logowania; gdy osoba loguje się spoza firmowej sieci, przed przejściem do strony logowania musi podać kod wysłany na firmowy adres e-mail",
               ],
               media: [
-                { type: "image", src: "", alt: "Miejsce na zdjęcie homelabu" }
               ]
             }
           },
