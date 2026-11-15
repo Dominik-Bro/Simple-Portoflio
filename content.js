@@ -440,7 +440,8 @@ const EDITABLE_PORTFOLIO = {
               media: []
             }
           },
-                    {
+
+          {
             eyebrow: "PROJECTS / 04",
             title: "Wdrożenie Rustdesk",
             text: "Wdrożenie rozwiązania Rustdesk jako alternatywny dla Team Viewera",
@@ -466,6 +467,41 @@ const EDITABLE_PORTFOLIO = {
               ],
               media: [
               ]
+            }
+          },
+          {
+            eyebrow: "PROJECTS / 05",
+            title: "Prywatny Homelab",
+            text: "Homelab w którym hostuje serwisy i testuję nowe rzeczy",
+            tags: ["Proxmox", "Docker", "OpenWRT", "VPN"],
+
+            detail: {
+              title: "Prywatny Hombelab",
+              lead: "Mój mały prywatny Homelab, to 'system', bez którego moje codzienne życie na pewno nie wyglądałoby tak samo. Dzięki zawartym w nim urzadzeniom mogę nie tylko sprawdzać i testować rzeczy, które mnie interesują, ale też uruchamiać rzeczywiście przydatne usługi ułatwiające między innymi: streaming treści wideo, zarządzenie hasłami, konfigurację przeróżnych urządzeń IoT, czy przechowywanie istotnych dokumetów.",
+              sections: [
+                {
+                }
+              ],
+              list: [
+                {text: "Wykonane zadania:", bold: true},
+                "Instalacja Proxmoxa na miniPC",
+                "Konfiguracja automatycznego tworzenia backupów wszystkich VM i kontenerów do lokalnego NAS'a oraz Pool'a ZFS w trybie Mirror",
+                "Utworzenie i konfiguracja kontenerów/VM dla większości serwisów wypisanych nieco niżej",
+                "Instalacja systemu OpenWRT na prywatnym Routerze",
+                "Podzielenie sieci na vLAN'y: vLAN główny, vLAN dla urządzeń IoT, vLAN dla gości, vLAN dla agenta/agentów AI, vLAN testowy do eksperymentów",
+                "Segmentacja vLANów poprzez zasady Firewalla. Np. urządzenie z vLAN'u IoT nie może samodzielnie rozpocząć komunikacji z urządzeniem z vLAN'u głównego",
+                "Konfiguracja serwera VPN Wireguard + Port Forwarding tej usługi, by mieć dostęp do Homelabowych usług nawet poza domem",
+                "Konfigruacja prostego Share'a SMB przez Sambę, by służył on jako lokalny NAS",
+                "Konfiguracja Pihole, służącego jako sieciowy bloker reklam i lokalny DNS",
+                "Konfiguracja Nginx Reverse Proxy, by w połączeniu z lokalnym DNS mieć dostęp do usług nie przez poszczególne IP + porty, a proste w zapamiętaniu nazwy (np. proxmox.moj-homelab.pl)",
+                "Konfiguracja HomeAssistanta wraz ze wsparcie dla Thread, Zigbee i Matter, w celu zarządzania lokalnymi urządzeniami IoT, takimi jak smart żarówki, gniazdka, czy termostaty",
+                "Konfiguracja Jellyfina - lokalnej usługi do streamingu wideo",
+                "Konfiguracja Vaulwardena - lokalnego menadżera haseł",
+                "Konguracja Paperless-ngx - lokalnej usługi do zarządzania dokumentami",
+                "Konfiguracaj lokalnego serwera Minecraft",
+                "Konfiugracja narzędzia Hermes Agent - Usługi do zarządzania agentami AI z modelami Remote połączonymi przez API lub z modelami lokalnymi shostowanymi przy pomocy programu Ollama",
+              ],
+              media: []
             }
           },
         ]
