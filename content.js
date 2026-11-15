@@ -439,7 +439,35 @@ const EDITABLE_PORTFOLIO = {
               ],
               media: []
             }
-          }
+          },
+                    {
+            eyebrow: "PROJECTS / 04",
+            title: "Wdrożenie Rustdesk",
+            text: "Wdrożenie rozwiązania Rustdesk jako alternatywny dla Team Viewera",
+            tags: ["Docker", "Linux", "Proxmox", "Port forwarding"],
+
+            detail: {
+              title: "Wdrożenie Rustdesk RDP",
+              lead: "Przy pracy z zewnętrznymi dostawcami (np. od systemu ERP) najszybszym sposobem na rozwiązanie problemów było połączenie dostawcy do danej stacji roboczej przez pulpit zdalny (RDP). Najpopularniejszym rozwiązaniem pozwalajcym osiągnąć taki cel bez bezpośredniego dostępu do sieci lokalnej jest TeamViewer. Aplikacja nie jest jednak otwartoźródłowa/self-hostowalana i zbiera sporo danych telemetrycznych, co nie podobało się niektórym osobom z zespołu. Z tego względu powstał pomysł przejścia z TeamViewera na alternatywę w pełni otwartoźródłową i zarządzą bezpośrednio z naszych serwerów: na RustDeska, za co byłem w pełni odpowiedzialny.",
+              sections: [
+                {}
+              ],
+              list: [
+                {text: "Wykonane zadania:", bold: true},
+                "Utworzenie nowego oddzielonymi zasadami Firewalla vLAN'u, pod shostowanie serwera pośredniczącego",
+                "Utworzenie nowej maszyny wirtualnej z Debianem na Proxmoxie i otagowanie jej odosobnionym vLAN'em",
+                "Wstępna konfiugracja maszyny wirtualnej (aktualizacja, utworzenie nowych użytkowników, instalacja Dockera, dodanie użytkownika do odpowiednich grup",
+                "Shostowanie serwera pośredniczącego RustDesk przy użyciu Docker Compose",
+                "Konfiguracja serwera pośredniczącego i wstępne testy  rozwiązania w sieci lokalnej",
+                "Przypisanie publicznego IP sieci do łatwej do zapamiętania publicznej subdomeny i konfiguracja DDNS, by rozwiązanie działało z trybem failover Routera",
+                "Konfiguracja Przekierowania portów na Routerze, by serwer pośredniczący był dostępny z sieci publicznej",
+                "Opublikowanie aplikacji Rustdesk wraz z jej plikami konfiguracayjnymi przez GPO, by rozwiązanie było łatwe do pobrania dla wszystkich użytkowników domenowych",
+                "Stworzenie dokumetancji i instrukcji demonstrujących sposób posługiwania się aplikacją",
+              ],
+              media: [
+              ]
+            }
+          },
         ]
       },
 
