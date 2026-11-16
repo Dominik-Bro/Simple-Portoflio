@@ -67,7 +67,7 @@ const EDITABLE_PORTFOLIO = {
                 "Proxmox",
                 "Konfiguracja Firewalla, Routingu i innych aspektów sieciowych na Linuxie",
                 "troubleshooting",
-                "Git i wersjonowanie",
+                "<Git> i wersjonowanie",
                 "Instalacja i konfiguracja",
                 "Zarządzanie użytkownikami i uprawnigoogeniami",
                 "Uruchamianie usług",
@@ -517,23 +517,13 @@ const EDITABLE_PORTFOLIO = {
           {
             eyebrow: "ABOUT / 01",
             title: "Trochę o mnie",
-            text: "Informacje o tym kim jestem, co lubię i jak chciałbym pracować",
+            text: "Parę informacji o tym kim jestem i co robię",
             tags: ["ja"],
 
             detail: {
               title: "Trochę o mnie",
-              lead: "Najbardziej cenię pracę, w której można połączyć samodzielność, techniczne grzebanie i sensowną dokumentację.",
+              lead: "Cześć! Mam na imię Dominik i chyba można powiedziec, że z zawodu jestem 'Informatykiem' (w szerokim tego słowa pojęciu). Od małego interesuję się nowymi technologiami i bardzo lubię mięc z nimi kontakt zarówno w pracy, jak i po godzinach. Jeżeli miałby powiedzieć, jakie obszary IT interesują mnie najbardziej, to powiedziałbym, że są to sprawy sprzętowe oraz sieci. W wolnym czasie straram się też rozwiać swoje umiejętności z obszarów zachaczających o SysOps/DevOps oraz typową administracją usługami. Jeżeli w pozostałch kartach znajduje się zakres umiejętności, którego szuka aktualnie Twoja firma, to zapraszam do kontaktu i liczę na owocną współpracę!",
               sections: [
-                {
-                  heading: "Zasada",
-                  body: "Diagnozuję → upraszczam → automatyzuję → dokumentuję."
-                }
-              ],
-              list: [
-                "samodzielność",
-                "dociekliwość",
-                "dokumentacja",
-                "powtarzalność"
               ],
               media: []
             }
